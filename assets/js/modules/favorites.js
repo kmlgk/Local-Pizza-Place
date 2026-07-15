@@ -50,6 +50,8 @@ function initFavorites() {
   document.querySelectorAll("[data-favorite-toggle]").forEach((btn) => {
     const name = btn.dataset.favoriteToggle;
     paintButton(btn, favorites.includes(name));
+    if (btn.dataset.favoriteBound) return;
+    btn.dataset.favoriteBound = "true";
 
     btn.addEventListener("click", () => {
       const current = getFavorites();

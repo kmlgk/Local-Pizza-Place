@@ -8,6 +8,8 @@ function initRipple() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   document.querySelectorAll("[data-ripple]").forEach((el) => {
+    if (el.dataset.rippleBound) return;
+    el.dataset.rippleBound = "true";
     el.style.position = el.style.position || "relative";
     el.style.overflow = "hidden";
 

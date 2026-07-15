@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Forno &amp; Co. pizza logo">
+  <path d="M10 25 Q50 3 90 25 L50 93 Z" fill="#D98B3F"/>
+  <path d="M16 29 Q50 11 84 29 L50 87 Z" fill="#E2574C"/>
+  <path d="M22 34 Q50 20 78 34 L50 80 Z" fill="#F6D164"/>
+  <circle cx="42" cy="43" r="5.5" fill="#B5312A"/>
+  <circle cx="59" cy="47" r="5" fill="#B5312A"/>
+  <circle cx="48" cy="61" r="5" fill="#B5312A"/>
+  <circle cx="37" cy="55" r="3.8" fill="#B5312A" opacity="0.9"/>
+  <ellipse cx="54" cy="36" rx="3" ry="1.6" fill="#3F7D46" transform="rotate(20 54 36)"/>
+  <ellipse cx="34" cy="47" rx="2.6" ry="1.4" fill="#3F7D46" transform="rotate(-15 34 47)"/>
+  <ellipse cx="50" cy="70" rx="2.6" ry="1.4" fill="#3F7D46" transform="rotate(8 50 70)"/>
+</svg>

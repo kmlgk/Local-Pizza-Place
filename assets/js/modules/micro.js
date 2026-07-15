@@ -22,11 +22,16 @@ function initMicroInteractions() {
     });
   });
 
-  const parallaxEls = [...document.querySelectorAll("[data-parallax]")].map((el) => ({
-    el,
-    speed: Number(el.dataset.parallax) || 0.15,
-    active: false,
-  }));
+  // GSAP ScrollTrigger (assets/js/modules/motion.js) owns [data-parallax] when
+  // available — this rAF-driven version is only a fallback for when the GSAP
+  // CDN scripts fail to load, so the two never fight over the same transform.
+  const parallaxEls = typeof window.gsap === "undefined"
+    ? [...document.querySelectorAll("[data-parallax]")].map((el) => ({
+        el,
+        speed: Number(el.dataset.parallax) || 0.15,
+        active: false,
+      }))
+    : [];
   if (parallaxEls.length) {
     const io = new IntersectionObserver(
       (entries) => {

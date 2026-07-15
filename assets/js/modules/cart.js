@@ -6,16 +6,16 @@
  */
 (function () {
 function initCart() {
-  const buttons = document.querySelectorAll("[data-add-to-cart]");
+  const buttons = [...document.querySelectorAll("[data-add-to-cart]")].filter((btn) => !btn.dataset.cartBound);
   if (!buttons.length) return;
 
   const badges = document.querySelectorAll("[data-cart-count]");
-  let count = Number(badges[0]?.textContent || 0);
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   buttons.forEach((btn) => {
+    btn.dataset.cartBound = "true";
     btn.addEventListener("click", () => {
-      count += 1;
+      const count = Number(badges[0]?.textContent || 0) + 1;
       badges.forEach((badge) => {
         badge.textContent = String(count);
         if (!reduceMotion) {

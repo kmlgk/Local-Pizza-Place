@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Account — Local Pizza Place</title>
-  <meta name="description" content="Create your free Local Pizza Place account to order online, track deliveries live, and reorder your favorites in one tap." />
+  <title>Create Account — Forno &amp; Co.</title>
+  <meta name="description" content="Create your free Forno &amp; Co. account to order online, track deliveries live, and reorder your favorites in one tap." />
   <link rel="canonical" href="https://example.com/register.html" />
   <meta name="theme-color" content="#EA580C" />
   <meta name="robots" content="noindex" />
@@ -26,6 +26,9 @@
   <script>tailwind.config = window.stacklyTailwindConfig;</script>
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1/dist/lenis.min.js" defer></script>
 </head>
 <body class="font-body bg-body text-ink antialiased">
   <div id="preloader" class="fixed inset-0 z-[300] flex items-center justify-center bg-body" aria-hidden="true">
@@ -33,7 +36,7 @@
       <div class="relative w-16 h-16">
         <div class="absolute inset-0 rounded-full border-4 border-border"></div>
         <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary preloader-spin"></div>
-        <div class="absolute inset-0 flex items-center justify-center text-2xl">🍕</div>
+        <div class="absolute inset-0 flex items-center justify-center p-4"><img src="assets/img/logo.svg" alt="" class="w-full h-full" /></div>
       </div>
       <span class="font-heading font-bold text-xs tracking-widest uppercase text-muted">Loading</span>
     </div>
@@ -63,8 +66,8 @@
     <!-- FORM SIDE -->
     <div class="flex flex-col justify-center px-6 sm:px-12 lg:px-20 py-12 order-1 lg:order-2">
       <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl mb-10">
-        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="pizza" class="w-5 h-5"></i></span>
-        Local Pizza Place
+        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white p-[7px]"><img src="assets/img/logo.svg" alt="" class="w-full h-full" /></span>
+        Forno &amp; Co.
       </a>
 
       <div data-reveal="fade-up" class="max-w-md w-full mx-auto">
@@ -131,6 +134,7 @@
   <script src="assets/js/modules/forms.js" defer></script>
   <script src="assets/js/modules/components.js" defer></script>
   <script src="assets/js/modules/micro.js" defer></script>
+  <script src="assets/js/modules/motion.js" defer></script>
   <script src="assets/js/modules/favorites.js" defer></script>
   <script src="assets/js/modules/ripple.js" defer></script>
   <script src="assets/js/modules/carousel.js" defer></script>

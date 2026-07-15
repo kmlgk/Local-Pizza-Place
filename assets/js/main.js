@@ -10,7 +10,25 @@ requestAnimationFrame(() => document.body.classList.add("page-ready"));
 (function hidePreloader() {
   const preloader = document.getElementById("preloader");
   if (!preloader) return;
-  const hide = () => preloader.classList.add("is-hidden");
+  const bar = preloader.querySelector("[data-preloader-bar]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const minVisible = reduceMotion ? 0 : 900;
+  const startedAt = Date.now();
+
+  if (bar) {
+    if (window.gsap) {
+      gsap.to(bar, { width: "100%", duration: minVisible / 1000 || 0.01, ease: "power1.out" });
+    } else {
+      bar.style.transition = `width ${minVisible}ms linear`;
+      requestAnimationFrame(() => (bar.style.width = "100%"));
+    }
+  }
+
+  const hide = () => {
+    const elapsed = Date.now() - startedAt;
+    const wait = Math.max(0, minVisible - elapsed);
+    window.setTimeout(() => preloader.classList.add("is-hidden"), wait);
+  };
   if (document.readyState === "complete") hide();
   else window.addEventListener("load", hide);
   window.setTimeout(hide, 4000);
@@ -26,6 +44,8 @@ window.LPP.initMicroInteractions();
 window.LPP.initFavorites();
 window.LPP.initRipple();
 window.LPP.initCarousels();
-window.LPP.initPaginate?.();
 window.LPP.initCart?.();
+window.LPP.initParticles?.();
+window.LPP.initMotion?.();
+window.LPP.initMenu?.();
 window.lucide?.createIcons();

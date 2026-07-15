@@ -55,8 +55,8 @@ html.dark {
   --text-muted: 148 163 184;
   --border-color: 30 41 59;
 
-  --glass-bg: 15 23 42 / 0.55;
-  --glass-border: 255 255 255 / 0.08;
+  --glass-bg: 30 41 59 / 0.94;
+  --glass-border: 255 255 255 / 0.14;
 
   --shadow-color: 0 0 0;
   color-scheme: dark;
@@ -192,6 +192,81 @@ html:not(.no-js) body.page-ready {
 }
 @media (prefers-reduced-motion: reduce) {
   html:not(.no-js) body { opacity: 1; transform: none; }
+}
+
+/* ---------- 5a-2. Page-leave transition (internal link clicks) ---------- */
+body.page-leaving {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.22s var(--ease-out-expo), transform 0.22s var(--ease-out-expo);
+}
+@media (prefers-reduced-motion: reduce) {
+  body.page-leaving { transition: none; }
+}
+
+/* ---------- 5a-3. 3D rotating pizza medallion ---------- */
+/* The tilt/glow/bob are driven by GSAP (assets/js/modules/motion.js) with a
+   bounded sway — never a full 360, so the flat photo never goes edge-on and
+   vanishes. This CSS just sets up the 3D stage and a static fallback pose. */
+.pizza-3d-wrap {
+  perspective: 1400px;
+  filter: drop-shadow(0 18px 28px rgb(var(--shadow-color) / 0.35));
+}
+.pizza-3d {
+  transform-style: preserve-3d;
+  transform: rotateY(-14deg) rotateX(10deg);
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pizza-3d { animation: none; }
+}
+
+/* ---------- 5a-4. Floating ingredient icons ---------- */
+.ingredient-drift { animation: ingredientDrift 7s ease-in-out infinite; }
+@keyframes ingredientDrift {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-22px) rotate(20deg) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ingredient-drift { animation: none; }
+}
+
+/* ---------- 5a-5. Ambient background particles ---------- */
+.particle-field { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgb(var(--color-primary) / 0.55);
+  animation-name: particleDrift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes particleDrift {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  12% { opacity: 0.75; }
+  88% { opacity: 0.75; }
+  100% { transform: translateY(-220px) scale(0.5); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .particle-field { display: none; }
+}
+
+/* ---------- 5a-6. Button shine sweep ---------- */
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgb(255 255 255 / 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.65s var(--ease-out-expo);
+}
+.btn-shine:hover::after { left: 130%; }
+@media (prefers-reduced-motion: reduce) {
+  .btn-shine::after { display: none; }
 }
 
 /* ---------- 5b-2. Sticky header scroll state ---------- */
