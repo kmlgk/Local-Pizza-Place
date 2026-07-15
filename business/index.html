@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly — Modern Business & Services Landing</title>
+  <meta name="description" content="Stackly is a premium multipurpose template for agencies and service businesses — strategy, design and engineering under one roof." />
+  <link rel="canonical" href="https://example.com/business/index.html" />
+  <meta name="theme-color" content="#2563EB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stackly — Modern Business & Services Landing" />
+  <meta property="og:image" content="https://picsum.photos/seed/stackly-og/1200/630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M9 20V12l7-4 7 4v8l-7 4-7-4Z' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("stackly-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", t === "dark");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind-config.js"></script>
+  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <style>
+    /* Stackly business template re-skin: blue/cyan brand on top of the shared token system */
+    :root { --color-primary: 37 99 235; --color-accent: 6 182 212; }
+    html.dark { --color-primary: 96 165 250; --color-accent: 34 211 238; }
+  </style>
+</head>
+<body class="font-body bg-body text-ink antialiased">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header data-site-header class="sticky top-0 z-50 transition-all duration-300 bg-body/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl">
+        <span class="w-9 h-9 rounded-md bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="box" class="w-5 h-5"></i></span>
+        Stackly
+      </a>
+      <nav class="hidden lg:flex items-center gap-6" aria-label="Primary">
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-semibold text-primary">Home <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-52 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Home — General</a>
+            <a href="home-saas.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Home — SaaS / Agency</a>
+          </div>
+        </div>
+        <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">Services <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-52 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="services.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">All Services</a>
+            <a href="service-details.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Service Details</a>
+          </div>
+        </div>
+        <a href="blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+        <a href="pricing.html" class="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
+        <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+        </button>
+        <button type="button" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="languages" class="w-5 h-5"></i>
+        </button>
+        <a href="login.html" class="hidden xl:inline-flex text-sm font-medium px-4 py-2.5 rounded-md hover:bg-surface-2 transition-colors">Login</a>
+        <a data-ripple href="register.html" class="hidden lg:inline-flex text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">Get Started</a>
+        <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div data-menu-backdrop class="fixed inset-0 bg-secondary/60 z-40 opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+  <aside id="mobile-menu" data-mobile-menu class="fixed inset-y-0 start-0 z-50 w-80 max-w-[85%] bg-surface -translate-x-full transition-transform duration-300 ease-out lg:hidden p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-heading font-extrabold text-lg">Stackly</span>
+      <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <nav class="flex flex-col gap-1">
+      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-primary/10 text-primary">Home — General</a>
+      <a href="home-saas.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home — SaaS / Agency</a>
+      <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
+      <a href="service-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Service Details</a>
+      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing</a>
+      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <div class="h-px bg-border my-2"></div>
+      <a href="login.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Login</a>
+      <a href="register.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">Get Started</a>
+      <a href="../index.html" class="px-3 py-3 mt-4 rounded-md text-xs font-semibold text-center border border-border flex items-center justify-center gap-2"><i data-lucide="pizza" class="w-3.5 h-3.5"></i> View Pizza Demo</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-radial-fade">
+      <div class="absolute inset-0 bg-mesh opacity-70 dark:opacity-40" aria-hidden="true"></div>
+      <div class="absolute -top-10 -end-10 w-72 h-72 rounded-full bg-accent/20 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-0 -start-16 w-80 h-80 rounded-full bg-primary/20 blur-3xl animate-float-slow" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="fade-up">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full glass text-primary mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Trusted by 12,000+ growing teams
+          </span>
+          <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+            Build a business website that <span class="text-gradient">converts &amp; scales</span>
+          </h1>
+          <p class="mt-6 text-lg text-muted max-w-xl">
+            Stackly combines premium design, buttery-smooth animation and a production-ready component
+            library so you can launch a polished business site in days, not months.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a data-ripple data-magnetic="16" href="register.html" class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow hover:shadow-elevated transition-shadow">
+              Start Free Trial <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+            </a>
+            <a href="about.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-border hover:bg-surface-2 font-semibold transition-colors">
+              <i data-lucide="play" class="w-4 h-4"></i> Learn More
+            </a>
+          </div>
+          <div class="mt-10 flex items-center gap-4">
+            <div class="flex -space-x-3">
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=12" alt="Customer avatar" loading="lazy" width="40" height="40" />
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=32" alt="Customer avatar" loading="lazy" width="40" height="40" />
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=48" alt="Customer avatar" loading="lazy" width="40" height="40" />
+              <span class="w-10 h-10 rounded-full border-2 border-body bg-primary text-white text-xs font-bold flex items-center justify-center">5k+</span>
+            </div>
+            <div class="text-sm">
+              <div class="flex text-warning" aria-hidden="true">★★★★★</div>
+              <p class="text-muted">Rated 4.9/5 from 2,400+ reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal="zoom-in" data-reveal-delay="150" class="relative">
+          <div class="glass rounded-xl shadow-elevated p-3 rotate-1">
+            <img src="https://picsum.photos/seed/stackly-hero/900/650" alt="Stackly analytics dashboard preview" class="rounded-lg w-full" loading="lazy" width="900" height="650" />
+          </div>
+          <div class="absolute -bottom-8 -start-8 glass rounded-lg p-4 shadow-elevated w-48 animate-float-delay">
+            <div class="flex items-center gap-2 text-success text-sm font-semibold"><i data-lucide="trending-up" class="w-4 h-4"></i> +32.8%</div>
+            <p class="text-xs text-muted mt-1">Revenue growth this quarter</p>
+          </div>
+          <div class="absolute -top-6 -end-6 glass rounded-lg p-3 shadow-elevated flex items-center gap-2 animate-float">
+            <span class="w-9 h-9 rounded-full bg-accent/15 text-accent flex items-center justify-center"><i data-lucide="bell-ring" class="w-4 h-4"></i></span>
+            <span class="text-xs font-semibold">New lead captured</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUSTED CLIENTS ============ -->
+    <section class="py-14 border-y border-border overflow-hidden" aria-label="Trusted by">
+      <div class="max-w-7xl mx-auto px-6">
+        <p class="text-center text-sm font-semibold text-muted uppercase tracking-wider mb-8">Powering teams at fast-growing companies</p>
+      </div>
+      <div class="flex gap-16 w-max animate-marquee">
+        <div class="flex gap-16 items-center shrink-0">
+          <span class="font-heading font-bold text-2xl text-muted/60">Nova</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Prisma</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Vertex</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Lumen</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Horizon</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Atlas</span>
+        </div>
+        <div class="flex gap-16 items-center shrink-0" aria-hidden="true">
+          <span class="font-heading font-bold text-2xl text-muted/60">Nova</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Prisma</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Vertex</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Lumen</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Horizon</span>
+          <span class="font-heading font-bold text-2xl text-muted/60">Atlas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="py-24" id="services">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">What we offer</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Everything you need to run &amp; grow</h2>
+          <p class="text-muted mt-4">A complete toolkit spanning strategy, design and engineering — built to work together seamlessly.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+          <article data-reveal="fade-up" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">Product Strategy</h3>
+            <p class="text-muted text-sm mt-2">Roadmaps and positioning grounded in real customer research and market data.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="80" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="palette" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">UI / UX Design</h3>
+            <p class="text-muted text-sm mt-2">Interfaces that feel effortless, tested with real users before a line of code ships.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="160" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">Web Engineering</h3>
+            <p class="text-muted text-sm mt-2">Fast, accessible, well-tested builds on a modern, maintainable stack.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+          <article data-reveal="fade-up" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="megaphone" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">Growth Marketing</h3>
+            <p class="text-muted text-sm mt-2">Full-funnel campaigns that turn visibility into pipeline and revenue.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="80" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">Security &amp; Compliance</h3>
+            <p class="text-muted text-sm mt-2">Enterprise-grade hardening, audits and compliance tooling baked in.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="160" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
+            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
+              <i data-lucide="headset" class="w-6 h-6"></i>
+            </span>
+            <h3 class="font-heading font-semibold text-lg">24/7 Support</h3>
+            <p class="text-muted text-sm mt-2">Real engineers on call — average first response time under 10 minutes.</p>
+            <a href="service-details.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Learn more <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="py-20 bg-gradient-brand relative overflow-hidden">
+      <div class="absolute -top-14 -end-14 w-64 h-64 rounded-full bg-white/10 blur-3xl animate-float-slow" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+        <div data-reveal="zoom-in"><p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="12400" data-counter-suffix="+">0</span></p><p class="text-white/80 text-sm mt-2">Active customers</p></div>
+        <div data-reveal="zoom-in" data-reveal-delay="80"><p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="98" data-counter-suffix="%">0</span></p><p class="text-white/80 text-sm mt-2">Satisfaction rate</p></div>
+        <div data-reveal="zoom-in" data-reveal-delay="160"><p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="150" data-counter-suffix="+">0</span></p><p class="text-white/80 text-sm mt-2">Countries served</p></div>
+        <div data-reveal="zoom-in" data-reveal-delay="240"><p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="24" data-counter-suffix="/7">0</span></p><p class="text-white/80 text-sm mt-2">Support coverage</p></div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING PREVIEW ============ -->
+    <section class="py-24 bg-surface-2">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Pricing</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Plans for every stage</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-14 max-w-5xl mx-auto">
+          <div data-reveal="fade-up" class="p-8 rounded-xl border border-border bg-surface card-elevate">
+            <h3 class="font-heading font-semibold text-lg">Starter</h3>
+            <p class="mt-3"><span class="text-4xl font-heading font-extrabold">$29</span><span class="text-muted">/mo</span></p>
+            <a href="pricing.html" class="mt-6 block text-center py-3 rounded-md border border-border font-semibold hover:bg-surface-2 transition-colors">Choose Starter</a>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="100" class="p-8 rounded-xl border-2 border-primary bg-surface card-elevate relative">
+            <span class="absolute -top-3 start-1/2 -translate-x-1/2 bg-gradient-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
+            <h3 class="font-heading font-semibold text-lg">Professional</h3>
+            <p class="mt-3"><span class="text-4xl font-heading font-extrabold">$79</span><span class="text-muted">/mo</span></p>
+            <a href="pricing.html" class="mt-6 block text-center py-3 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Choose Professional</a>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="200" class="p-8 rounded-xl border border-border bg-surface card-elevate">
+            <h3 class="font-heading font-semibold text-lg">Enterprise</h3>
+            <p class="mt-3"><span class="text-4xl font-heading font-extrabold">$199</span><span class="text-muted">/mo</span></p>
+            <a href="pricing.html" class="mt-6 block text-center py-3 rounded-md border border-border font-semibold hover:bg-surface-2 transition-colors">Choose Enterprise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Testimonials</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Loved by teams worldwide</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-14">
+          <figure data-reveal="fade-up" class="p-7 rounded-lg border border-border bg-surface card-elevate">
+            <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 text-sm">"Stackly cut our launch timeline in half. The component quality is genuinely agency-grade."</blockquote>
+            <figcaption class="flex items-center gap-3 mt-6">
+              <img src="https://i.pravatar.cc/80?img=5" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+              <div><p class="font-semibold text-sm">Amelia Carter</p><p class="text-xs text-muted">CEO, Novaris</p></div>
+            </figcaption>
+          </figure>
+          <figure data-reveal="fade-up" data-reveal-delay="100" class="p-7 rounded-lg border border-border bg-surface card-elevate">
+            <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 text-sm">"Accessibility support saved us weeks of audit remediation. Exceptional attention to detail."</blockquote>
+            <figcaption class="flex items-center gap-3 mt-6">
+              <img src="https://i.pravatar.cc/80?img=15" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+              <div><p class="font-semibold text-sm">Daniel Osei</p><p class="text-xs text-muted">CTO, Vertex Health</p></div>
+            </figcaption>
+          </figure>
+          <figure data-reveal="fade-up" data-reveal-delay="200" class="p-7 rounded-lg border border-border bg-surface card-elevate">
+            <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 text-sm">"The dark mode support worked flawlessly for our launch, zero rework needed."</blockquote>
+            <figcaption class="flex items-center gap-3 mt-6">
+              <img src="https://i.pravatar.cc/80?img=25" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+              <div><p class="font-semibold text-sm">Layla Haddad</p><p class="text-xs text-muted">Founder, Lumen Retail</p></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div data-reveal="fade-up" class="bg-gradient-brand rounded-xl px-8 py-14 sm:px-16 text-center relative overflow-hidden">
+          <div class="absolute -top-10 -end-10 w-56 h-56 rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white">Ready to build something great?</h2>
+          <p class="text-white/85 mt-3 max-w-xl mx-auto">Start your free 14-day trial today — no credit card required.</p>
+          <a data-ripple data-magnetic="14" href="register.html" class="magnetic-btn inline-flex items-center gap-2 mt-8 px-8 py-3.5 rounded-md bg-white text-primary font-semibold hover:shadow-elevated transition-shadow">
+            Get Started Free <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-secondary text-white/70 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl text-white">
+          <span class="w-9 h-9 rounded-md bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="box" class="w-5 h-5"></i></span>
+          Stackly
+        </a>
+        <p class="text-sm mt-4 max-w-xs">Premium multipurpose template for modern businesses, agencies and service teams.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Company</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-white transition-colors">About us</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Resources</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+          <li><a href="login.html" class="hover:text-white transition-colors">Login</a></li>
+          <li><a href="register.html" class="hover:text-white transition-colors">Create account</a></li>
+          <li><a href="dashboard.html" class="hover:text-white transition-colors">Admin Dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">More demos</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="../index.html" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="pizza" class="w-3.5 h-3.5"></i> Local Pizza Place</a></li>
+          <li><a href="coming-soon.html" class="hover:text-white transition-colors">Coming Soon page</a></li>
+          <li><a href="maintenance.html" class="hover:text-white transition-colors">Maintenance page</a></li>
+          <li><a href="404.html" class="hover:text-white transition-colors">404 page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+      <p>&copy; 2026 Stackly. All rights reserved.</p>
+      <p>Crafted with <i data-lucide="heart" class="w-3.5 h-3.5 inline text-danger"></i> for the web.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/modules/theme.js" defer></script>
+  <script src="../assets/js/modules/nav.js" defer></script>
+  <script src="../assets/js/modules/reveal.js" defer></script>
+  <script src="../assets/js/modules/counter.js" defer></script>
+  <script src="../assets/js/modules/forms.js" defer></script>
+  <script src="../assets/js/modules/components.js" defer></script>
+  <script src="../assets/js/modules/micro.js" defer></script>
+  <script src="../assets/js/modules/favorites.js" defer></script>
+  <script src="../assets/js/modules/ripple.js" defer></script>
+  <script src="../assets/js/modules/carousel.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

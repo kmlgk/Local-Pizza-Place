@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve a Table — Local Pizza Place</title>
+  <meta name="description" content="Reserve a table at Local Pizza Place. Pick a date, time and party size and we'll have it ready for you." />
+  <meta name="keywords" content="pizza restaurant reservation, book a table, local pizza place" />
+  <link rel="canonical" href="https://example.com/reservations.html" />
+  <meta name="theme-color" content="#EA580C" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Reserve a Table — Local Pizza Place" />
+  <meta property="og:image" content="https://picsum.photos/seed/pizza-og/1200/630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23EA580C'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23FEF3C7'/%3E%3Ccircle cx='13' cy='13' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='19' cy='14' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='16' cy='19' r='1.6' fill='%23DC2626'/%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("stackly-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", t === "dark");
+        var d = localStorage.getItem("stackly-dir"); if (d) document.documentElement.dir = d;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body class="font-body bg-body text-ink antialiased">
+  <div id="preloader" class="fixed inset-0 z-[300] flex items-center justify-center bg-body" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <div class="relative w-16 h-16">
+        <div class="absolute inset-0 rounded-full border-4 border-border"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary preloader-spin"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-2xl">🍕</div>
+      </div>
+      <span class="font-heading font-bold text-xs tracking-widest uppercase text-muted">Loading</span>
+    </div>
+  </div>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="hidden md:block bg-secondary text-white/70 text-xs relative z-40">
+    <div class="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Mon–Sun, 11am–11pm</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Riverside, CA</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+15551234567" class="flex items-center gap-1.5 hover:text-white transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5"></i> (555) 123-4567</a>
+        <span class="flex items-center gap-3">
+          <a href="#" aria-label="Instagram" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <header data-site-header class="sticky top-0 z-50 transition-all duration-300 bg-body/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl">
+        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+        Local Pizza Place
+      </a>
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Primary">
+        <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+        <a href="index.html#menu" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
+        <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">Company <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-56 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="services.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Services</a>
+            <a href="blog.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Blog</a>
+            <a href="pricing.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Pricing &amp; Deals</a>
+          </div>
+        </div>
+        <a href="reservations.html" class="text-sm font-semibold text-primary">Reservations</a>
+        <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+        </button>
+        <button type="button" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="languages" class="w-5 h-5"></i>
+        </button>
+        <a href="dashboard.html" class="hidden xl:inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-md hover:bg-surface-2 transition-colors">
+          <i data-lucide="user-circle" class="w-4 h-4"></i> My Account
+        </a>
+        <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> <span class="hidden sm:inline">Order</span>
+        </a>
+        <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div data-menu-backdrop class="fixed inset-0 bg-secondary/60 z-40 opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+  <aside id="mobile-menu" data-mobile-menu class="fixed inset-y-0 start-0 z-50 w-80 max-w-[85%] bg-surface -translate-x-full transition-transform duration-300 ease-out lg:hidden p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-heading font-extrabold text-lg">Local Pizza Place</span>
+      <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <nav class="flex flex-col gap-1">
+      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home</a>
+      <a href="index.html#menu" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
+      <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
+      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing &amp; Deals</a>
+      <a href="reservations.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-primary/10 text-primary">Reservations</a>
+      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-radial-fade py-20">
+      <div class="absolute inset-0 bg-mesh opacity-60 dark:opacity-35" aria-hidden="true"></div>
+      <div class="absolute -top-10 -end-10 w-72 h-72 rounded-full bg-accent/20 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="absolute -bottom-16 -start-12 w-64 h-64 rounded-full bg-primary/15 blur-3xl" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="relative max-w-3xl mx-auto px-6 text-center">
+        <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-sm text-muted mb-6">
+          <a href="index.html" class="hover:text-primary">Home</a> <i data-lucide="chevron-right" class="w-3.5 h-3.5 rtl:rotate-180"></i> <span class="text-ink font-medium">Reservations</span>
+        </nav>
+        <span data-reveal="fade-up" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full glass text-primary mb-6">
+          <i data-lucide="calendar-check" class="w-3.5 h-3.5"></i> Tables usually available same-day
+        </span>
+        <h1 data-reveal="fade-up" data-reveal-delay="80" class="font-heading font-extrabold text-4xl sm:text-5xl">Save a table, <span class="text-gradient">skip the wait</span></h1>
+        <p data-reveal="fade-up" data-reveal-delay="160" class="text-muted mt-5">Booking ahead means your pizza starts the moment you sit down. Parties of 8+, please call us directly.</p>
+      </div>
+    </section>
+
+    <!-- ============ RESERVATION FORM + INFO ============ -->
+    <section class="pb-24">
+      <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-5 gap-10">
+        <!-- FORM -->
+        <div data-reveal="fade-up" class="lg:col-span-3 p-8 rounded-xl border border-border bg-surface card-elevate">
+          <h2 class="font-heading font-bold text-2xl">Book your table</h2>
+          <form data-validate class="mt-6 grid sm:grid-cols-2 gap-5" novalidate>
+            <div data-field-wrapper>
+              <label for="res-name" class="text-sm font-medium">Full name</label>
+              <input id="res-name" name="name" type="text" required data-field="name" placeholder="Jane Cooper" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper>
+              <label for="res-phone" class="text-sm font-medium">Phone number</label>
+              <input id="res-phone" name="phone" type="tel" required data-field="phone" placeholder="+1 (555) 000-0000" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper class="sm:col-span-2">
+              <label for="res-email" class="text-sm font-medium">Email address</label>
+              <input id="res-email" name="email" type="email" required data-field="email" placeholder="you@email.com" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper>
+              <label for="res-date" class="text-sm font-medium">Date</label>
+              <input id="res-date" name="date" type="date" required class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper>
+              <label for="res-time" class="text-sm font-medium">Time</label>
+              <select id="res-time" name="time" required class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none">
+                <option value="">Select a time</option>
+                <option>11:30 AM</option><option>12:00 PM</option><option>12:30 PM</option><option>6:00 PM</option><option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option>
+              </select>
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper>
+              <label for="res-guests" class="text-sm font-medium">Party size</label>
+              <select id="res-guests" name="guests" required class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none">
+                <option value="">Select guests</option>
+                <option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option><option>7 guests</option><option>8+ guests (call us)</option>
+              </select>
+              <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+            </div>
+            <div data-field-wrapper>
+              <label for="res-occasion" class="text-sm font-medium">Occasion (optional)</label>
+              <select id="res-occasion" name="occasion" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none">
+                <option value="">None</option><option>Birthday</option><option>Anniversary</option><option>Business meal</option><option>Date night</option>
+              </select>
+            </div>
+            <div data-field-wrapper class="sm:col-span-2">
+              <label for="res-notes" class="text-sm font-medium">Special requests</label>
+              <textarea id="res-notes" name="notes" rows="3" placeholder="Allergies, high chair, booth seating, etc." class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none"></textarea>
+            </div>
+            <button data-ripple type="submit" class="sm:col-span-2 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Confirm Reservation</button>
+            <p data-form-status class="hidden sm:col-span-2" role="status"></p>
+          </form>
+        </div>
+
+        <!-- INFO SIDEBAR -->
+        <aside class="lg:col-span-2 space-y-6">
+          <div data-reveal="fade-up" class="p-7 rounded-xl border border-border bg-surface">
+            <h3 class="font-heading font-semibold">Dining hours</h3>
+            <ul class="mt-4 space-y-2 text-sm">
+              <li class="flex justify-between"><span>Mon – Thu</span><span class="text-muted">11:30 AM – 9:30 PM</span></li>
+              <li class="flex justify-between"><span>Fri – Sat</span><span class="text-muted">11:30 AM – 11:00 PM</span></li>
+              <li class="flex justify-between"><span>Sunday</span><span class="text-muted">12:00 PM – 9:00 PM</span></li>
+            </ul>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="80" class="p-7 rounded-xl border border-border bg-surface">
+            <h3 class="font-heading font-semibold">Reservation policy</h3>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success shrink-0 mt-0.5"></i> Tables held for 15 minutes past booking time</li>
+              <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success shrink-0 mt-0.5"></i> Free cancellation up to 2 hours ahead</li>
+              <li class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success shrink-0 mt-0.5"></i> Groups of 8+ please call ahead</li>
+            </ul>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="160" class="p-7 rounded-xl border border-border bg-surface">
+            <h3 class="font-heading font-semibold">Prefer to call?</h3>
+            <a href="tel:+15550107499" class="flex items-center gap-2 mt-3 text-primary font-semibold"><i data-lucide="phone" class="w-4 h-4"></i> (555) 010-7499</a>
+            <p class="text-sm text-muted mt-2 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0"></i> 88 Sunset Ave, Riverside</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-secondary text-white/70 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl text-white">
+          <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+          Local Pizza Place
+        </a>
+        <p class="text-sm mt-4 max-w-xs">Wood-fired pizza, family recipes, delivered hot since 2011.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Explore</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="index.html#menu" class="hover:text-white transition-colors">Full menu</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors">About us</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing &amp; deals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Account</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="dashboard.html" class="hover:text-white transition-colors">My orders</a></li>
+          <li><a href="login.html" class="hover:text-white transition-colors">Login</a></li>
+          <li><a href="register.html" class="hover:text-white transition-colors">Create account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Contact</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 010-7499</li>
+          <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> 88 Sunset Ave, Riverside</li>
+          <li class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> 11:00 AM – 11:00 PM daily</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 text-xs text-center">
+      <p>&copy; 2026 Local Pizza Place. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/modules/theme.js" defer></script>
+  <script src="assets/js/modules/nav.js" defer></script>
+  <script src="assets/js/modules/reveal.js" defer></script>
+  <script src="assets/js/modules/counter.js" defer></script>
+  <script src="assets/js/modules/forms.js" defer></script>
+  <script src="assets/js/modules/components.js" defer></script>
+  <script src="assets/js/modules/micro.js" defer></script>
+  <script src="assets/js/modules/favorites.js" defer></script>
+  <script src="assets/js/modules/ripple.js" defer></script>
+  <script src="assets/js/modules/carousel.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

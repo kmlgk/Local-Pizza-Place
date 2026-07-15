@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Pizza Place — Wood-Fired Pizza, Delivered Hot</title>
+  <meta name="description" content="Order fresh, wood-fired pizza online from Local Pizza Place. Browse the full menu, grab a combo deal, and track your delivery live." />
+  <meta name="keywords" content="pizza restaurant, order pizza online, local pizza delivery, pizza menu" />
+  <link rel="canonical" href="https://example.com/index.html" />
+  <meta name="theme-color" content="#EA580C" />
+  <meta property="og:type" content="restaurant.menu" />
+  <meta property="og:title" content="Local Pizza Place — Wood-Fired Pizza, Delivered Hot" />
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wood_Fired_Pizza.jpg/960px-Wood_Fired_Pizza.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23EA580C'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23FEF3C7'/%3E%3Ccircle cx='13' cy='13' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='19' cy='14' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='16' cy='19' r='1.6' fill='%23DC2626'/%3E%3C/svg%3E" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Local Pizza Place",
+    "servesCuisine": "Pizza",
+    "priceRange": "$$",
+    "address": { "@type": "PostalAddress", "streetAddress": "88 Sunset Ave", "addressLocality": "Riverside" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1240" }
+  }
+  </script>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("stackly-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", t === "dark");
+        var d = localStorage.getItem("stackly-dir"); if (d) document.documentElement.dir = d;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body class="font-body bg-body text-ink antialiased">
+  <div id="preloader" class="fixed inset-0 z-[300] flex items-center justify-center bg-body" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <div class="relative w-16 h-16">
+        <div class="absolute inset-0 rounded-full border-4 border-border"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary preloader-spin"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-2xl">🍕</div>
+      </div>
+      <span class="font-heading font-bold text-xs tracking-widest uppercase text-muted">Loading</span>
+    </div>
+  </div>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="hidden md:block bg-secondary text-white/70 text-xs relative z-40">
+    <div class="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Mon–Sun, 11am–11pm</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Riverside, CA</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+15551234567" class="flex items-center gap-1.5 hover:text-white transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5"></i> (555) 123-4567</a>
+        <span class="flex items-center gap-3">
+          <a href="#" aria-label="Instagram" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <header data-site-header class="sticky top-0 z-50 transition-all duration-300 bg-body/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl">
+        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+        Local Pizza Place
+      </a>
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Primary">
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-semibold text-primary">Home <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-56 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Order Online</a>
+            <a href="index-2.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Catering &amp; Events</a>
+          </div>
+        </div>
+        <a href="#menu" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
+        <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">Company <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-56 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="services.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Services</a>
+            <a href="service-details.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Catering Details</a>
+            <a href="blog.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Blog</a>
+            <a href="pricing.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Pricing &amp; Deals</a>
+          </div>
+        </div>
+        <a href="reservations.html" class="text-sm font-medium hover:text-primary transition-colors">Reservations</a>
+        <a href="contact.html" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+        </button>
+        <button type="button" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="languages" class="w-5 h-5"></i>
+        </button>
+        <div data-dropdown class="relative hidden xl:block">
+          <button data-dropdown-trigger aria-expanded="false" aria-label="Notifications" class="relative w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
+            <i data-lucide="bell" class="w-5 h-5"></i>
+            <span class="absolute top-2 end-2 w-2 h-2 rounded-full bg-danger"></span>
+          </button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 end-0 w-80 glass shadow-elevated rounded-lg p-3 origin-top-right">
+            <div class="flex items-center justify-between px-2 py-1"><h3 class="font-semibold text-sm">Notifications</h3><a href="dashboard.html#notifications" class="text-xs text-primary font-semibold">View all</a></div>
+            <a href="dashboard.html#notifications" class="flex gap-3 p-2.5 rounded-md hover:bg-primary/10">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-warning/15 text-warning flex items-center justify-center"><i data-lucide="bike" class="w-4 h-4"></i></span>
+              <div class="text-sm"><p>Order <strong>#10234</strong> is out for delivery</p><p class="text-xs text-muted">2 min ago</p></div>
+            </a>
+            <a href="dashboard.html#coupons" class="flex gap-3 p-2.5 rounded-md hover:bg-primary/10">
+              <span class="w-9 h-9 shrink-0 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="ticket-percent" class="w-4 h-4"></i></span>
+              <div class="text-sm"><p>New coupon: 20% off Family Combo</p><p class="text-xs text-muted">1 hr ago</p></div>
+            </a>
+          </div>
+        </div>
+        <a href="dashboard.html" class="hidden xl:inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-md hover:bg-surface-2 transition-colors">
+          <i data-lucide="user-circle" class="w-4 h-4"></i> My Account
+        </a>
+        <button data-ripple data-drawer-open="cart-drawer" type="button" class="relative inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> <span class="hidden sm:inline">Cart</span>
+          <span data-cart-count class="absolute -top-2 -end-2 w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-bold flex items-center justify-center">3</span>
+        </button>
+        <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div data-menu-backdrop class="fixed inset-0 bg-secondary/60 z-40 opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+  <aside id="mobile-menu" data-mobile-menu class="fixed inset-y-0 start-0 z-50 w-80 max-w-[85%] bg-surface -translate-x-full transition-transform duration-300 ease-out lg:hidden p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-heading font-extrabold text-lg">Local Pizza Place</span>
+      <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <nav class="flex flex-col gap-1">
+      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-primary/10 text-primary">Order Online</a>
+      <a href="index-2.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering &amp; Events</a>
+      <a href="#menu" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
+      <a href="#combos" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Combo Deals</a>
+      <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
+      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing &amp; Deals</a>
+      <a href="#reviews" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Reviews</a>
+      <a href="#faq" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">FAQ</a>
+      <a href="#delivery" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Delivery Area</a>
+      <a href="reservations.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Reservations</a>
+      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <div class="h-px bg-border my-2"></div>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-radial-fade">
+      <div class="absolute inset-0 bg-mesh opacity-70 dark:opacity-40" aria-hidden="true"></div>
+      <div class="absolute -top-10 -end-10 w-72 h-72 rounded-full bg-accent/20 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="absolute bottom-0 -start-16 w-80 h-80 rounded-full bg-primary/20 blur-3xl animate-float-slow" aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-24 lg:pt-20 lg:pb-32 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="fade-up">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full glass text-primary mb-6">
+            <i data-lucide="flame" class="w-3.5 h-3.5"></i> Wood-fired since 2011 · 30 min or it's free
+          </span>
+          <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+            Hot, fresh pizza <span class="text-gradient">delivered to your door</span>
+          </h1>
+          <p class="mt-6 text-lg text-muted max-w-xl">
+            Hand-stretched dough, slow-simmered sauce, and real mozzarella — order online and watch your pizza go from oven to doorstep in real time.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-4">
+            <a data-magnetic="16" data-ripple href="#menu" class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow hover:shadow-elevated transition-shadow">
+              Order Online <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+            </a>
+            <a href="dashboard.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-border hover:bg-surface-2 font-semibold transition-colors">
+              <i data-lucide="map-pin" class="w-4 h-4"></i> Track My Order
+            </a>
+          </div>
+          <div class="mt-10 flex items-center gap-4">
+            <div class="flex -space-x-3">
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=5" alt="Customer" loading="lazy" width="40" height="40" />
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=25" alt="Customer" loading="lazy" width="40" height="40" />
+              <img class="w-10 h-10 rounded-full border-2 border-body" src="https://i.pravatar.cc/80?img=33" alt="Customer" loading="lazy" width="40" height="40" />
+              <span class="w-10 h-10 rounded-full border-2 border-body bg-primary text-white text-xs font-bold flex items-center justify-center">9k+</span>
+            </div>
+            <div class="text-sm">
+              <div class="flex text-warning" aria-hidden="true">★★★★★</div>
+              <p class="text-muted">4.8 rating from 1,240+ orders</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-reveal="zoom-in" data-reveal-delay="150" class="relative">
+          <div class="glass rounded-xl shadow-elevated p-3 rotate-1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Pizza_baking_in_Wood-fired_oven.jpg/960px-Pizza_baking_in_Wood-fired_oven.jpg" alt="Fresh wood-fired pepperoni pizza" class="rounded-lg w-full" loading="lazy" width="900" height="650" />
+          </div>
+          <div class="absolute -bottom-8 -start-8 glass rounded-lg p-4 shadow-elevated w-52 animate-float-delay">
+            <div class="flex items-center gap-2 text-success text-sm font-semibold"><i data-lucide="timer" class="w-4 h-4"></i> 22 min</div>
+            <p class="text-xs text-muted mt-1">Average delivery time tonight</p>
+          </div>
+          <div class="absolute -top-6 -end-6 glass rounded-lg p-3 shadow-elevated flex items-center gap-2 animate-float">
+            <span class="w-9 h-9 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="check" class="w-4 h-4"></i></span>
+            <span class="text-xs font-semibold">Order out for delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HIGHLIGHT TICKER ============ -->
+    <section class="py-5 bg-secondary border-y border-black/10 overflow-hidden" aria-label="Highlights">
+      <div class="flex gap-16 w-max animate-marquee">
+        <div class="flex gap-16 items-center shrink-0 text-white/80 text-sm font-semibold uppercase tracking-wider">
+          <span class="flex items-center gap-2"><i data-lucide="flame" class="w-4 h-4 text-accent"></i> Wood-fired daily</span>
+          <span class="flex items-center gap-2"><i data-lucide="leaf" class="w-4 h-4 text-success"></i> 100% real mozzarella</span>
+          <span class="flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4 text-warning"></i> 30 min or it's free</span>
+          <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-accent"></i> Free delivery over $30</span>
+          <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-warning"></i> Family owned since 2011</span>
+        </div>
+        <div class="flex gap-16 items-center shrink-0 text-white/80 text-sm font-semibold uppercase tracking-wider" aria-hidden="true">
+          <span class="flex items-center gap-2"><i data-lucide="flame" class="w-4 h-4 text-accent"></i> Wood-fired daily</span>
+          <span class="flex items-center gap-2"><i data-lucide="leaf" class="w-4 h-4 text-success"></i> 100% real mozzarella</span>
+          <span class="flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4 text-warning"></i> 30 min or it's free</span>
+          <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-accent"></i> Free delivery over $30</span>
+          <span class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-warning"></i> Family owned since 2011</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PIZZAS ============ -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-end justify-between flex-wrap gap-4" data-reveal="fade-up">
+          <div>
+            <span class="text-sm font-semibold text-primary uppercase tracking-wider">Fan favorites</span>
+            <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Featured pizzas</h2>
+          </div>
+          <a href="#menu" class="inline-flex items-center gap-2 text-sm font-semibold text-primary">See full menu <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i></a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <article data-reveal="fade-up" class="group rounded-xl overflow-hidden border border-border bg-surface card-elevate">
+            <div class="relative overflow-hidden">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/960px-Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="Classic Margherita pizza with fresh basil" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="600" height="440" />
+              <span class="absolute top-3 start-3 px-2.5 py-1 rounded-full text-xs font-bold bg-warning text-secondary">Bestseller</span>
+              <button type="button" data-favorite-toggle="Classic Margherita" aria-label="Add Classic Margherita to favorites" aria-pressed="false" class="absolute top-3 end-3 w-9 h-9 rounded-full glass text-muted flex items-center justify-center transition-colors">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-heading font-semibold text-lg">Classic Margherita</h3>
+                <span class="font-heading font-bold text-primary shrink-0">$14.50</span>
+              </div>
+              <p class="text-sm text-muted mt-2">San Marzano tomato, fresh mozzarella, basil, extra virgin olive oil.</p>
+              <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+              </button>
+            </div>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="80" class="group rounded-xl overflow-hidden border border-border bg-surface card-elevate">
+            <div class="relative overflow-hidden">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pepperoni_pizza_slice_on_a_red_plate.jpg/960px-Pepperoni_pizza_slice_on_a_red_plate.jpg" alt="Spicy pepperoni pizza with melted mozzarella" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="600" height="440" />
+              <span class="absolute top-3 start-3 px-2.5 py-1 rounded-full text-xs font-bold bg-danger text-white">Spicy</span>
+              <button type="button" data-favorite-toggle="Spicy Pepperoni" aria-label="Add Spicy Pepperoni to favorites" aria-pressed="false" class="absolute top-3 end-3 w-9 h-9 rounded-full glass text-muted flex items-center justify-center transition-colors">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-heading font-semibold text-lg">Spicy Pepperoni</h3>
+                <span class="font-heading font-bold text-primary shrink-0">$16.90</span>
+              </div>
+              <p class="text-sm text-muted mt-2">Double pepperoni, chili honey drizzle, mozzarella, oregano.</p>
+              <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+              </button>
+            </div>
+          </article>
+          <article data-reveal="fade-up" data-reveal-delay="160" class="group rounded-xl overflow-hidden border border-border bg-surface card-elevate">
+            <div class="relative overflow-hidden">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vegetarian_pizza.jpg/960px-Vegetarian_pizza.jpg" alt="Veggie supreme pizza loaded with vegetables" class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="600" height="440" />
+              <span class="absolute top-3 start-3 px-2.5 py-1 rounded-full text-xs font-bold bg-success text-white">Vegetarian</span>
+              <button type="button" data-favorite-toggle="Veggie Supreme" aria-label="Add Veggie Supreme to favorites" aria-pressed="false" class="absolute top-3 end-3 w-9 h-9 rounded-full glass text-muted flex items-center justify-center transition-colors">
+                <i data-lucide="heart" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <div class="p-5">
+              <div class="flex items-start justify-between gap-3">
+                <h3 class="font-heading font-semibold text-lg">Veggie Supreme</h3>
+                <span class="font-heading font-bold text-primary shrink-0">$15.90</span>
+              </div>
+              <p class="text-sm text-muted mt-2">Bell peppers, red onion, olives, mushroom, mozzarella, herbs.</p>
+              <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm flex items-center justify-center gap-2">
+                <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="py-20 bg-gradient-brand relative overflow-hidden">
+      <div class="absolute -top-14 -end-14 w-64 h-64 rounded-full bg-white/10 blur-3xl animate-float-slow" aria-hidden="true"></div>
+      <div class="absolute -bottom-16 -start-10 w-72 h-72 rounded-full bg-white/10 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+        <div data-reveal="zoom-in">
+          <p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="52000" data-counter-suffix="+">0</span></p>
+          <p class="text-white/80 text-sm mt-2">Pizzas served</p>
+        </div>
+        <div data-reveal="zoom-in" data-reveal-delay="80">
+          <p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="9400" data-counter-suffix="+">0</span></p>
+          <p class="text-white/80 text-sm mt-2">Happy customers</p>
+        </div>
+        <div data-reveal="zoom-in" data-reveal-delay="160">
+          <p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="22" data-counter-suffix=" min">0</span></p>
+          <p class="text-white/80 text-sm mt-2">Average delivery</p>
+        </div>
+        <div data-reveal="zoom-in" data-reveal-delay="240">
+          <p class="font-heading font-extrabold text-4xl sm:text-5xl"><span data-counter data-counter-to="4.8" data-counter-decimals="1" data-counter-suffix="★">0</span></p>
+          <p class="text-white/80 text-sm mt-2">Average rating</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FULL MENU ============ -->
+    <section id="menu" class="py-24 bg-surface-2 relative overflow-hidden">
+      <div class="absolute -top-24 -start-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-float-slow" aria-hidden="true"></div>
+      <div class="absolute -bottom-28 -end-16 w-80 h-80 rounded-full bg-accent/10 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="absolute top-1/2 start-1/3 w-56 h-56 rounded-full bg-primary/5 blur-3xl animate-float-delay" aria-hidden="true"></div>
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Full menu</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Something for <span class="text-gradient">everyone</span></h2>
+        </div>
+
+        <div data-tabs class="mt-12">
+          <div class="flex flex-wrap justify-center gap-2" role="tablist" aria-label="Menu categories">
+            <button data-tab-trigger="pizzas" role="tab" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">Pizzas</button>
+            <button data-tab-trigger="sides" role="tab" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">Sides</button>
+            <button data-tab-trigger="drinks" role="tab" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">Drinks</button>
+            <button data-tab-trigger="desserts" role="tab" class="px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">Desserts</button>
+          </div>
+
+          <!-- PIZZAS -->
+          <div data-tab-panel="pizzas" data-paginate data-per-page="6" class="mt-10">
+            <div data-paginate-items class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/960px-Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="Classic Margherita pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">Bestseller</span>
+                  <button type="button" data-favorite-toggle="Classic Margherita" aria-label="Add Classic Margherita to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Classic Margherita</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$14.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.9</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">San Marzano tomato, fresh mozzarella, basil, olive oil.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pepperoni_pizza_slice_on_a_red_plate.jpg/960px-Pepperoni_pizza_slice_on_a_red_plate.jpg" alt="Spicy pepperoni pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Spicy</span>
+                  <button type="button" data-favorite-toggle="Spicy Pepperoni" aria-label="Add Spicy Pepperoni to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Spicy Pepperoni</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$16.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.8</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Double pepperoni, chili honey drizzle, mozzarella.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vegetarian_pizza.jpg/960px-Vegetarian_pizza.jpg" alt="Veggie supreme pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-success text-white shadow-soft">Vegetarian</span>
+                  <button type="button" data-favorite-toggle="Veggie Supreme" aria-label="Add Veggie Supreme to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Veggie Supreme</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$15.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Bell peppers, red onion, olives, mushroom, herbs.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chicken_BBQ_Pizza.jpg" alt="BBQ chicken pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Popular</span>
+                  <button type="button" data-favorite-toggle="BBQ Chicken" aria-label="Add BBQ Chicken to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">BBQ Chicken</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$17.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Grilled chicken, smoky BBQ sauce, red onion, cilantro.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pizza_quattro_formaggi_at_restaurant%2C_Chalk_Farm_Road%2C_London.jpg/960px-Pizza_quattro_formaggi_at_restaurant%2C_Chalk_Farm_Road%2C_London.jpg" alt="Four cheese pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Chef's Pick</span>
+                  <button type="button" data-favorite-toggle="Four Cheese" aria-label="Add Four Cheese to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Four Cheese</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$16.00</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.5</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Mozzarella, gorgonzola, parmesan, ricotta.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Hawaiian_pizza_1.jpg/960px-Hawaiian_pizza_1.jpg" alt="Hawaiian pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">Fan Fave</span>
+                  <button type="button" data-favorite-toggle="Hawaiian" aria-label="Add Hawaiian to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Hawaiian</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$15.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.4</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Smoked ham, pineapple, mozzarella.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alfredo_Stonebaked_Pizza_Meat_Lovers.jpg/960px-Alfredo_Stonebaked_Pizza_Meat_Lovers.jpg" alt="Meat lovers pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Loaded</span>
+                  <button type="button" data-favorite-toggle="Meat Lovers" aria-label="Add Meat Lovers to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Meat Lovers</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$18.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.9</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Pepperoni, sausage, bacon, ham, mozzarella.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Buffalo_Chicken_Pizza_from_We%2C_The_Pizza_%285027893889%29.jpg/960px-Buffalo_Chicken_Pizza_from_We%2C_The_Pizza_%285027893889%29.jpg" alt="Buffalo chicken pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Spicy</span>
+                  <button type="button" data-favorite-toggle="Buffalo Chicken" aria-label="Add Buffalo Chicken to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Buffalo Chicken</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$17.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Buffalo sauce, grilled chicken, mozzarella, ranch drizzle.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Mushroom_pizza_and_beer.jpg" alt="Mushroom truffle pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Gourmet</span>
+                  <button type="button" data-favorite-toggle="Mushroom Truffle" aria-label="Add Mushroom Truffle to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Mushroom Truffle</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$18.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.8</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Wild mushrooms, truffle oil, fontina, fresh thyme.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Spinach-pizza-close.jpg/960px-Spinach-pizza-close.jpg" alt="Spinach and feta pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-success text-white shadow-soft">Vegetarian</span>
+                  <button type="button" data-favorite-toggle="Spinach &amp; Feta" aria-label="Add Spinach &amp; Feta to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Spinach &amp; Feta</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$16.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.5</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Baby spinach, feta, red onion, garlic oil base.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/White_Pizza_%28No_Sauce%29_-_Large_8_slices._Mozzarella%2C_ricotta%2C_grated_pecorino_Romano_cheese%2C_garlic_infused_oil%2C_oregano%2C_black_pepper_%26_basil.jpg/960px-White_Pizza_%28No_Sauce%29_-_Large_8_slices._Mozzarella%2C_ricotta%2C_grated_pecorino_Romano_cheese%2C_garlic_infused_oil%2C_oregano%2C_black_pepper_%26_basil.jpg" alt="White pizza with ricotta and garlic" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Chef's Pick</span>
+                  <button type="button" data-favorite-toggle="White Pizza" aria-label="Add White Pizza to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">White Pizza</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$15.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">No red sauce — ricotta, mozzarella, roasted garlic.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pizza_Salami_%2823216234375%29.jpg/960px-Pizza_Salami_%2823216234375%29.jpg" alt="Diavola spicy salami pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Spicy</span>
+                  <button type="button" data-favorite-toggle="Diavola" aria-label="Add Diavola to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Diavola</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$17.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Spicy salami, calabrian chili, mozzarella, oregano.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+            </div>
+            <nav data-paginate-controls aria-label="Pizzas pagination" class="flex items-center justify-center gap-2 mt-10"></nav>
+          </div>
+
+          <!-- SIDES -->
+          <div data-tab-panel="sides" class="hidden" data-paginate data-per-page="3">
+            <div data-paginate-items class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Garlic_bread_-_on_plate%2C_ready_to_eat.jpg/960px-Garlic_bread_-_on_plate%2C_ready_to_eat.jpg" alt="Garlic bread" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Popular</span>
+                  <button type="button" data-favorite-toggle="Garlic Bread" aria-label="Add Garlic Bread to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Garlic Bread</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$6.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Herbed butter, toasted to order.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_Wings_with_Montreal_Seasoning.jpg/960px-Chicken_Wings_with_Montreal_Seasoning.jpg" alt="Chicken wings" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">Bestseller</span>
+                  <button type="button" data-favorite-toggle="Chicken Wings" aria-label="Add Chicken Wings to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Chicken Wings (8pc)</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$10.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.8</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Choice of buffalo, BBQ, or plain.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Mozzarella_sticks.jpg" alt="Mozzarella sticks" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Kid Favorite</span>
+                  <button type="button" data-favorite-toggle="Mozzarella Sticks" aria-label="Add Mozzarella Sticks to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Mozzarella Sticks (6pc)</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$7.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Golden fried, served with marinara.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Caesar-salad.jpg/960px-Caesar-salad.jpg" alt="Caesar salad" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-success text-white shadow-soft">Fresh</span>
+                  <button type="button" data-favorite-toggle="Caesar Salad" aria-label="Add Caesar Salad to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Caesar Salad</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$6.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.4</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Romaine, parmesan, croutons, house dressing.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Salad_platter.jpg/960px-Salad_platter.jpg" alt="Garden salad" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-success text-white shadow-soft">Fresh</span>
+                  <button type="button" data-favorite-toggle="Garden Salad" aria-label="Add Garden Salad to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Garden Salad</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$5.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.3</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Mixed greens, tomato, cucumber, red onion.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Potato_wedges_with_mayonnaise.jpg/960px-Potato_wedges_with_mayonnaise.jpg" alt="Loaded potato wedges" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Loaded</span>
+                  <button type="button" data-favorite-toggle="Loaded Potato Wedges" aria-label="Add Loaded Potato Wedges to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Loaded Potato Wedges</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$7.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Cheddar, bacon bits, scallion, sour cream.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+            </div>
+            <nav data-paginate-controls aria-label="Sides pagination" class="flex items-center justify-center gap-2 mt-10"></nav>
+          </div>
+
+          <!-- DRINKS -->
+          <div data-tab-panel="drinks" class="hidden" data-paginate data-per-page="3">
+            <div data-paginate-items class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Tumbler_of_cola_with_ice.jpg" alt="Soft drinks" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Classic</span>
+                  <button type="button" data-favorite-toggle="Soft Drink" aria-label="Add Soft Drink to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Soft Drink (500ml)</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$2.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.3</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Cola, lemon-lime, or orange.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Glass_of_iced_tea_-_Evan_Swigart.jpg" alt="Iced tea" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Refreshing</span>
+                  <button type="button" data-favorite-toggle="Fresh Iced Tea" aria-label="Add Fresh Iced Tea to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Fresh Iced Tea</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$3.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Brewed daily, lightly sweetened.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sparkling_Water_with_Mint_in_Glass_Cup.jpg/960px-Sparkling_Water_with_Mint_in_Glass_Cup.jpg" alt="Sparkling water" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-success text-white shadow-soft">Light</span>
+                  <button type="button" data-favorite-toggle="Sparkling Water" aria-label="Add Sparkling Water to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Sparkling Water</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$2.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.2</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Chilled, with a slice of lemon.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Delicious_fresh_lemonade_in_a_bag_%287446556720%29.jpg/960px-Delicious_fresh_lemonade_in_a_bag_%287446556720%29.jpg" alt="Fresh lemonade" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Refreshing</span>
+                  <button type="button" data-favorite-toggle="Fresh Lemonade" aria-label="Add Fresh Lemonade to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Fresh Lemonade</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$3.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Squeezed daily, not too sweet.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Root_Beer_Float.jpg" alt="Craft root beer" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Local</span>
+                  <button type="button" data-favorite-toggle="Craft Root Beer" aria-label="Add Craft Root Beer to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Craft Root Beer</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$3.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.5</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Small-batch, bottled locally.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Strawberry_Italian_soda.jpg/960px-Strawberry_Italian_soda.jpg" alt="Italian soda" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">New</span>
+                  <button type="button" data-favorite-toggle="Italian Soda" aria-label="Add Italian Soda to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Italian Soda</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$4.20</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.4</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Cream soda, raspberry, or peach flavor.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+            </div>
+            <nav data-paginate-controls aria-label="Drinks pagination" class="flex items-center justify-center gap-2 mt-10"></nav>
+          </div>
+
+          <!-- DESSERTS -->
+          <div data-tab-panel="desserts" class="hidden" data-paginate data-per-page="3">
+            <div data-paginate-items class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Dessert_Tiramisu.jpg/960px-Dessert_Tiramisu.jpg" alt="Tiramisu" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">Bestseller</span>
+                  <button type="button" data-favorite-toggle="Tiramisu" aria-label="Add Tiramisu to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Tiramisu</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$6.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.9</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Classic mascarpone, espresso-soaked ladyfingers.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Nutella_Pizza.jpg/960px-Nutella_Pizza.jpg" alt="Nutella dessert pizza" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-primary text-white shadow-soft">Chef's Pick</span>
+                  <button type="button" data-favorite-toggle="Nutella Dessert Pizza" aria-label="Add Nutella Dessert Pizza to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Nutella Dessert Pizza</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$8.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.6</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Warm dough, hazelnut spread, powdered sugar.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="120" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Chocolate_chip_mousse_cannoli_at_Mike%27s_Pastries.jpg" alt="Cannoli" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-accent text-white shadow-soft">Classic</span>
+                  <button type="button" data-favorite-toggle="Cannoli" aria-label="Add Cannoli to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Cannoli (2pc)</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$6.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.5</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Crisp shells, sweet ricotta filling.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Chocolate_lava_cake.jpg/960px-Chocolate_lava_cake.jpg" alt="Chocolate lava cake" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-danger text-white shadow-soft">Popular</span>
+                  <button type="button" data-favorite-toggle="Chocolate Lava Cake" aria-label="Add Chocolate Lava Cake to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">Chocolate Lava Cake</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$7.50</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★★</span><span class="text-[11px] font-semibold text-muted">4.8</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Warm, molten center, vanilla gelato.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+              <article data-paginate-item data-reveal="fade-up" data-reveal-delay="60" class="group relative rounded-2xl overflow-hidden border border-border bg-surface card-elevate">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Plain_New_York-style_cheesecake.JPG/960px-Plain_New_York-style_cheesecake.JPG" alt="New York cheesecake" class="w-full h-44 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <span class="absolute top-2.5 start-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold bg-warning text-secondary shadow-soft">Fan Fave</span>
+                  <button type="button" data-favorite-toggle="New York Cheesecake" aria-label="Add New York Cheesecake to favorites" aria-pressed="false" class="absolute top-2.5 end-2.5 w-8 h-8 rounded-full glass text-muted flex items-center justify-center transition-all duration-300 hover:scale-110"><i data-lucide="heart" class="w-3.5 h-3.5"></i></button>
+                </div>
+                <div class="p-4">
+                  <div class="flex items-start justify-between gap-2"><h3 class="font-heading font-semibold text-sm">New York Cheesecake</h3><span class="font-heading font-bold text-primary text-sm shrink-0">$6.90</span></div>
+                  <div class="flex items-center gap-1 mt-1"><span class="text-warning text-xs leading-none">★★★★☆</span><span class="text-[11px] font-semibold text-muted">4.7</span></div>
+                  <p class="text-xs text-muted mt-1.5 line-clamp-2">Classic, creamy, graham cracker crust.</p>
+                  <button type="button" data-add-to-cart data-ripple class="w-full mt-3 py-2 rounded-md bg-gradient-brand text-white font-semibold text-xs flex items-center justify-center gap-1.5 transition-transform active:scale-95"><i data-lucide="plus" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-90"></i> Add to Order</button>
+                </div>
+              </article>
+            </div>
+            <nav data-paginate-controls aria-label="Desserts pagination" class="flex items-center justify-center gap-2 mt-10"></nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RELATED TO YOUR PIZZA ============ -->
+    <section class="py-24 overflow-hidden" aria-label="Related picks">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Complete your order</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Goes great with your pizza</h2>
+          <p class="text-muted mt-4">Customer favorites that pair perfectly with anything on the menu.</p>
+        </div>
+
+        <div data-reveal="fade-up" data-reveal-delay="100" data-carousel data-carousel-autoplay="4000" class="relative mt-14">
+          <div class="overflow-hidden">
+            <div data-carousel-track class="flex gap-5 transition-transform duration-700 ease-out">
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Garlic_bread_-_on_plate%2C_ready_to_eat.jpg/960px-Garlic_bread_-_on_plate%2C_ready_to_eat.jpg" alt="Garlic bread, a popular pizza pairing" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary text-white">Pairs well</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Garlic Bread</h3>
+                  <p class="text-xs text-muted mt-1">The classic starter for any pizza night.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$6.50</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_Wings_with_Montreal_Seasoning.jpg/960px-Chicken_Wings_with_Montreal_Seasoning.jpg" alt="Chicken wings, great with spicy pizzas" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-danger text-white">Bestseller</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Chicken Wings</h3>
+                  <p class="text-xs text-muted mt-1">Great alongside our Diavola or Buffalo Chicken.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$10.90</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Caesar-salad.jpg/960px-Caesar-salad.jpg" alt="Caesar salad, a lighter pairing" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-success text-white">Lighter option</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Caesar Salad</h3>
+                  <p class="text-xs text-muted mt-1">Balances out a rich, cheesy pizza order.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$6.50</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Delicious_fresh_lemonade_in_a_bag_%287446556720%29.jpg/960px-Delicious_fresh_lemonade_in_a_bag_%287446556720%29.jpg" alt="Fresh lemonade" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-accent text-white">Refreshing</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Fresh Lemonade</h3>
+                  <p class="text-xs text-muted mt-1">Cuts through the richness of Meat Lovers.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$3.90</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Dessert_Tiramisu.jpg/960px-Dessert_Tiramisu.jpg" alt="Tiramisu for dessert" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-warning text-secondary">Sweet finish</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Tiramisu</h3>
+                  <p class="text-xs text-muted mt-1">The perfect way to end any pizza night.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$6.90</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+              <div data-carousel-slide class="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)] shrink-0 rounded-xl border border-border bg-surface card-elevate overflow-hidden group">
+                <div class="relative overflow-hidden">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Mozzarella_sticks.jpg" alt="Mozzarella sticks" class="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="450" height="280" />
+                  <span class="absolute top-2 start-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-primary text-white">Kid favorite</span>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-semibold text-sm">Mozzarella Sticks</h3>
+                  <p class="text-xs text-muted mt-1">A crowd-pleasing extra for any order.</p>
+                  <div class="flex items-center justify-between mt-3"><span class="font-semibold text-primary text-sm">$7.90</span><button type="button" data-add-to-cart data-ripple class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button data-carousel-prev type="button" aria-label="Previous related items" class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -start-5 w-11 h-11 rounded-full bg-surface border border-border shadow-soft items-center justify-center hover:bg-surface-2 disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+            <i data-lucide="chevron-left" class="w-5 h-5 rtl:rotate-180"></i>
+          </button>
+          <button data-carousel-next type="button" aria-label="Next related items" class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -end-5 w-11 h-11 rounded-full bg-surface border border-border shadow-soft items-center justify-center hover:bg-surface-2 disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+            <i data-lucide="chevron-right" class="w-5 h-5 rtl:rotate-180"></i>
+          </button>
+
+          <div data-carousel-dots class="flex justify-center gap-2 mt-8" role="tablist" aria-label="Related items pages"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMBO OFFERS ============ -->
+    <section id="combos" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Limited-time</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Combo deals &amp; offers</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div data-reveal="fade-up" class="relative p-6 rounded-xl border-2 border-primary bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-danger text-white text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 20%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Alfredo_Stonebaked_Pizza_Meat_Lovers.jpg/960px-Alfredo_Stonebaked_Pizza_Meat_Lovers.jpg" alt="Family combo: two pizzas, sides, and drinks" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Family Combo</h3>
+            <p class="text-sm text-muted mt-1">2 large pizzas + garlic bread + 4 drinks</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$39.99</span><span class="text-sm text-muted line-through">$49.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="80" class="relative p-6 rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-warning text-secondary text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 15%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pepperoni_pizza_slice_on_a_red_plate.jpg/960px-Pepperoni_pizza_slice_on_a_red_plate.jpg" alt="Lunch combo: one pizza slice, side salad, and drink" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Lunch Special</h3>
+            <p class="text-sm text-muted mt-1">2 slices + side salad + soft drink</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$9.99</span><span class="text-sm text-muted line-through">$11.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="160" class="relative p-6 rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-success text-white text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 10%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/960px-Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="Date night combo: one large pizza, dessert, and two drinks" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Date Night Duo</h3>
+            <p class="text-sm text-muted mt-1">1 large pizza + tiramisu + 2 drinks</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$24.99</span><span class="text-sm text-muted line-through">$27.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+          <div data-reveal="fade-up" class="relative p-6 rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 18%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Chicken_BBQ_Pizza.jpg" alt="Game day bundle: large pizza, wings, and a drink pack" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Game Day Bundle</h3>
+            <p class="text-sm text-muted mt-1">2 large pizzas + wings (16pc) + 6 drinks</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$54.99</span><span class="text-sm text-muted line-through">$66.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="80" class="relative p-6 rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-accent text-white text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 12%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Fat_Slice_pepperoni_pizza_slice.JPG/960px-Fat_Slice_pepperoni_pizza_slice.JPG" alt="Solo slice deal: one slice, a side, and a drink" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Solo Slice Deal</h3>
+            <p class="text-sm text-muted mt-1">1 slice + potato wedges + soft drink</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$7.99</span><span class="text-sm text-muted line-through">$8.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="160" class="relative p-6 rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+            <span class="absolute -top-3 -end-3 w-20 h-20 rounded-full bg-success text-white text-xs font-bold flex items-center justify-center rotate-12 shadow-elevated">Save 15%</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vegetarian_pizza.jpg/960px-Vegetarian_pizza.jpg" alt="Vegetarian feast: two veggie pizzas, garden salad, and drinks" class="w-full h-40 object-cover rounded-lg" loading="lazy" width="500" height="280" />
+            <h3 class="font-heading font-semibold text-lg mt-4">Vegetarian Feast</h3>
+            <p class="text-sm text-muted mt-1">2 veggie pizzas + garden salad + 4 drinks</p>
+            <div class="flex items-center gap-2 mt-3"><span class="font-heading font-bold text-2xl text-primary">$34.99</span><span class="text-sm text-muted line-through">$40.99</span></div>
+            <button type="button" data-add-to-cart data-ripple class="w-full mt-4 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Grab this Deal</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="fade-right" class="relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Pizza_baking_in_Wood-fired_oven.jpg/960px-Pizza_baking_in_Wood-fired_oven.jpg" alt="Chef sliding a fresh pizza out of a wood-fired oven" class="rounded-xl shadow-elevated w-full" loading="lazy" width="800" height="650" />
+          <div class="absolute -bottom-6 -end-6 glass rounded-lg p-4 shadow-elevated flex items-center gap-3 animate-float-slow">
+            <span class="w-10 h-10 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="leaf" class="w-5 h-5"></i></span>
+            <div>
+              <p class="text-sm font-semibold">Sourced fresh daily</p>
+              <p class="text-xs text-muted">From local farms &amp; suppliers</p>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="fade-left">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Why choose us</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Made with care, delivered with pride</h2>
+          <p class="text-muted mt-4">Every pizza that leaves our kitchen goes through the same routine we've followed since 2011 — hand-stretched dough, real ingredients, and an oven that never cools down.</p>
+          <div class="grid sm:grid-cols-2 gap-5 mt-8">
+            <div data-reveal="fade-up" class="flex gap-3">
+              <span class="w-11 h-11 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center"><i data-lucide="wheat" class="w-5 h-5"></i></span>
+              <div><h3 class="font-semibold text-sm">Fresh dough, daily</h3><p class="text-xs text-muted mt-1">Hand-stretched every morning, never frozen.</p></div>
+            </div>
+            <div data-reveal="fade-up" data-reveal-delay="60" class="flex gap-3">
+              <span class="w-11 h-11 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5"></i></span>
+              <div><h3 class="font-semibold text-sm">Real wood-fired ovens</h3><p class="text-xs text-muted mt-1">900°F ovens for that perfect char.</p></div>
+            </div>
+            <div data-reveal="fade-up" data-reveal-delay="120" class="flex gap-3">
+              <span class="w-11 h-11 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+              <div><h3 class="font-semibold text-sm">5-star hygiene rated</h3><p class="text-xs text-muted mt-1">Spotless kitchen, inspected quarterly.</p></div>
+            </div>
+            <div data-reveal="fade-up" data-reveal-delay="180" class="flex gap-3">
+              <span class="w-11 h-11 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center"><i data-lucide="bike" class="w-5 h-5"></i></span>
+              <div><h3 class="font-semibold text-sm">30-minute promise</h3><p class="text-xs text-muted mt-1">Late? Your order's on us.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEET THE TEAM ============ -->
+    <section class="py-24 bg-surface-2">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">The people behind the pizza</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Meet our pizzaiolos</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+          <div data-reveal="fade-up" class="group text-center card-elevate p-6 rounded-xl border border-border bg-surface">
+            <div class="relative w-24 h-24 mx-auto overflow-hidden rounded-full">
+              <img src="https://i.pravatar.cc/200?img=52" alt="Portrait of Marco Belli, head pizzaiolo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="96" height="96" />
+            </div>
+            <h3 class="font-heading font-semibold mt-4">Marco Belli</h3>
+            <p class="text-xs text-primary font-semibold mt-0.5">Head Pizzaiolo</p>
+            <p class="text-xs text-muted mt-2">15 years behind the oven, trained in Naples.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="80" class="group text-center card-elevate p-6 rounded-xl border border-border bg-surface">
+            <div class="relative w-24 h-24 mx-auto overflow-hidden rounded-full">
+              <img src="https://i.pravatar.cc/200?img=47" alt="Portrait of Sofia Russo, dough specialist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="96" height="96" />
+            </div>
+            <h3 class="font-heading font-semibold mt-4">Sofia Russo</h3>
+            <p class="text-xs text-primary font-semibold mt-0.5">Dough Specialist</p>
+            <p class="text-xs text-muted mt-2">Hand-stretches every batch fresh at dawn.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="160" class="group text-center card-elevate p-6 rounded-xl border border-border bg-surface">
+            <div class="relative w-24 h-24 mx-auto overflow-hidden rounded-full">
+              <img src="https://i.pravatar.cc/200?img=13" alt="Portrait of Diego Fontana, sauce master" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="96" height="96" />
+            </div>
+            <h3 class="font-heading font-semibold mt-4">Diego Fontana</h3>
+            <p class="text-xs text-primary font-semibold mt-0.5">Sauce Master</p>
+            <p class="text-xs text-muted mt-2">Simmers our San Marzano sauce for 6 hours daily.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="240" class="group text-center card-elevate p-6 rounded-xl border border-border bg-surface">
+            <div class="relative w-24 h-24 mx-auto overflow-hidden rounded-full">
+              <img src="https://i.pravatar.cc/200?img=32" alt="Portrait of Elena Marchetti, delivery lead" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="96" height="96" />
+            </div>
+            <h3 class="font-heading font-semibold mt-4">Elena Marchetti</h3>
+            <p class="text-xs text-primary font-semibold mt-0.5">Delivery Lead</p>
+            <p class="text-xs text-muted mt-2">Keeps our 30-minute promise running like clockwork.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATERING & PARTIES ============ -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="fade-right" class="relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg/960px-Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg" alt="Large catering spread of pizzas for a party" class="rounded-xl shadow-elevated w-full" loading="lazy" width="800" height="620" />
+          <div class="absolute -bottom-6 -end-6 glass rounded-lg p-4 shadow-elevated flex items-center gap-3 animate-float">
+            <span class="w-10 h-10 rounded-full bg-primary/15 text-primary flex items-center justify-center"><i data-lucide="party-popper" class="w-5 h-5"></i></span>
+            <div>
+              <p class="text-sm font-semibold">200+ events catered</p>
+              <p class="text-xs text-muted">This year alone</p>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="fade-left">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Catering &amp; parties</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Feeding a crowd? We've got you.</h2>
+          <p class="text-muted mt-4">From office lunches to backyard birthdays, our catering trays are cut, boxed and ready to serve — no setup required. Order 24 hours ahead for the best selection.</p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-success shrink-0 mt-0.5"></i><div><h3 class="font-semibold text-sm">Party trays, feeds 10-15</h3><p class="text-xs text-muted mt-1">Mix and match up to 4 varieties per tray.</p></div></li>
+            <li class="flex gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-success shrink-0 mt-0.5"></i><div><h3 class="font-semibold text-sm">Free delivery on orders over $150</h3><p class="text-xs text-muted mt-1">We'll drop it right where you need it.</p></div></li>
+            <li class="flex gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-success shrink-0 mt-0.5"></i><div><h3 class="font-semibold text-sm">Custom menus for corporate accounts</h3><p class="text-xs text-muted mt-1">Recurring orders, invoicing, the works.</p></div></li>
+          </ul>
+          <a data-ripple href="index.html#contact" class="inline-flex items-center gap-2 mt-8 px-7 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">
+            Request a Catering Quote <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ONLINE ORDERING STEPS ============ -->
+    <section class="py-24 bg-surface-2">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">How online ordering works</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">From cart to doorstep in 4 easy steps</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14 relative">
+          <div class="hidden lg:block absolute top-8 start-[12%] end-[12%] h-px bg-border" aria-hidden="true"></div>
+          <div data-reveal="fade-up" class="relative text-center">
+            <span class="w-16 h-16 mx-auto rounded-full bg-gradient-brand text-white flex items-center justify-center shadow-glow relative z-10"><i data-lucide="utensils" class="w-6 h-6"></i></span>
+            <h3 class="font-semibold mt-5">Browse the menu</h3>
+            <p class="text-sm text-muted mt-2">Pick your favorites or a combo deal.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="80" class="relative text-center">
+            <span class="w-16 h-16 mx-auto rounded-full bg-gradient-brand text-white flex items-center justify-center shadow-glow relative z-10"><i data-lucide="settings-2" class="w-6 h-6"></i></span>
+            <h3 class="font-semibold mt-5">Customize it</h3>
+            <p class="text-sm text-muted mt-2">Choose size, crust and toppings.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="160" class="relative text-center">
+            <span class="w-16 h-16 mx-auto rounded-full bg-gradient-brand text-white flex items-center justify-center shadow-glow relative z-10"><i data-lucide="credit-card" class="w-6 h-6"></i></span>
+            <h3 class="font-semibold mt-5">Checkout securely</h3>
+            <p class="text-sm text-muted mt-2">Save your address for next time.</p>
+          </div>
+          <div data-reveal="fade-up" data-reveal-delay="240" class="relative text-center">
+            <span class="w-16 h-16 mx-auto rounded-full bg-gradient-brand text-white flex items-center justify-center shadow-glow relative z-10"><i data-lucide="map-pin" class="w-6 h-6"></i></span>
+            <h3 class="font-semibold mt-5">Track live</h3>
+            <p class="text-sm text-muted mt-2">Follow your order to your door.</p>
+          </div>
+        </div>
+        <div class="text-center mt-12" data-reveal="fade-up">
+          <a data-ripple href="dashboard.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">
+            Go to My Account <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="py-24 bg-surface-2">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-end justify-between flex-wrap gap-4" data-reveal="fade-up">
+          <div>
+            <span class="text-sm font-semibold text-primary uppercase tracking-wider">From the oven</span>
+            <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Follow @localpizzaplace</h2>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-primary"><i data-lucide="instagram" class="w-4 h-4"></i> View on Instagram</a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mt-10">
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wood_Fired_Pizza.jpg/960px-Wood_Fired_Pizza.jpg" data-gallery-caption="Fresh out of the wood-fired oven" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wood_Fired_Pizza.jpg/960px-Wood_Fired_Pizza.jpg" alt="Fresh pizza out of the wood-fired oven" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg/960px-Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg" data-gallery-caption="Hand-stretching today's dough" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg/960px-Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg" alt="Chef hand-stretching pizza dough" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Porciones_de_pizza_argentina_con_ingredientes_tradicionales.jpg/960px-Porciones_de_pizza_argentina_con_ingredientes_tradicionales.jpg" data-gallery-caption="Toppings prepped fresh every morning" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Porciones_de_pizza_argentina_con_ingredientes_tradicionales.jpg/960px-Porciones_de_pizza_argentina_con_ingredientes_tradicionales.jpg" alt="Fresh pizza toppings prepped on a board" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Imos_Pizza_in_the_box_1.jpg" data-gallery-caption="Boxed up and ready to ride" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Imos_Pizza_in_the_box_1.jpg" alt="Pizza boxed and ready for delivery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg/960px-Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg" data-gallery-caption="Our dining room on a Friday night" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg/960px-Italian_Pizzeria_and_Restaurant_interior%2C_Live_Oak.jpg" alt="Restaurant dining room full of guests" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+          <button type="button" data-modal-open="gallery-modal" data-gallery-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Last_pizza_delivery_of_the_night_%2821301214092%29.jpg/960px-Last_pizza_delivery_of_the_night_%2821301214092%29.jpg" data-gallery-caption="A very happy Friday order" class="group relative aspect-square rounded-lg overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Last_pizza_delivery_of_the_night_%2821301214092%29.jpg/960px-Last_pizza_delivery_of_the_night_%2821301214092%29.jpg" alt="Customer holding a fresh pizza box" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width="400" height="400" />
+            <span class="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/30 transition-colors flex items-center justify-center"><i data-lucide="expand" class="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity"></i></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section id="reviews" class="py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Customer love</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">What our regulars say</h2>
+        </div>
+
+        <div data-reveal="fade-up" data-reveal-delay="100" data-carousel data-carousel-autoplay="4500" class="relative mt-14">
+          <div class="overflow-hidden">
+            <div data-carousel-track class="flex gap-6 transition-transform duration-700 ease-out">
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"Best pizza in the neighborhood, hands down. The tracking feature means I know exactly when to grab plates."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=19" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Jenna Rivers</p><p class="text-xs text-muted">Regular customer</p></div>
+                </figcaption>
+              </figure>
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"Reordering my usual Friday combo takes 10 seconds. Genuinely the easiest ordering experience I've used."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=14" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Tom Becker</p><p class="text-xs text-muted">Verified order</p></div>
+                </figcaption>
+              </figure>
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"Consistently hot, consistently fast. The Family Combo feeds my whole crew for less than takeout usually costs."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=27" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Priya Nair</p><p class="text-xs text-muted">Verified order</p></div>
+                </figcaption>
+              </figure>
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"The catering tray saved our office party — showed up hot, on time, and everyone asked where it was from."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=8" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Marcus Diaz</p><p class="text-xs text-muted">Catering customer</p></div>
+                </figcaption>
+              </figure>
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"Coupons actually apply automatically at checkout, no fumbling with codes. Small thing but it matters."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=36" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Aisha Khan</p><p class="text-xs text-muted">Verified order</p></div>
+                </figcaption>
+              </figure>
+              <figure data-carousel-slide class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 p-7 rounded-lg border border-border bg-surface card-elevate">
+                <div class="flex text-warning text-sm" aria-hidden="true">★★★★★</div>
+                <blockquote class="mt-4 text-sm">"Gluten-free crust actually tastes like crust. First pizza place that's gotten it right for my family."</blockquote>
+                <figcaption class="flex items-center gap-3 mt-6">
+                  <img src="https://i.pravatar.cc/80?img=45" alt="" class="w-10 h-10 rounded-full" loading="lazy" width="40" height="40" />
+                  <div><p class="font-semibold text-sm">Ryan O'Connell</p><p class="text-xs text-muted">Regular customer</p></div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <button data-carousel-prev type="button" aria-label="Previous testimonials" class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -start-5 w-11 h-11 rounded-full bg-surface border border-border shadow-soft items-center justify-center hover:bg-surface-2 disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+            <i data-lucide="chevron-left" class="w-5 h-5 rtl:rotate-180"></i>
+          </button>
+          <button data-carousel-next type="button" aria-label="Next testimonials" class="hidden sm:flex absolute top-1/2 -translate-y-1/2 -end-5 w-11 h-11 rounded-full bg-surface border border-border shadow-soft items-center justify-center hover:bg-surface-2 disabled:opacity-30 disabled:cursor-not-allowed transition-opacity">
+            <i data-lucide="chevron-right" class="w-5 h-5 rtl:rotate-180"></i>
+          </button>
+
+          <div data-carousel-dots class="flex justify-center gap-2 mt-8" role="tablist" aria-label="Testimonial pages"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET THE APP ============ -->
+    <section class="py-24 bg-secondary relative overflow-hidden">
+      <div class="absolute inset-0 bg-mesh opacity-30" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div data-reveal="fade-right" class="order-2 lg:order-1 relative flex justify-center">
+          <div class="glass rounded-[2rem] shadow-elevated p-3 w-64 animate-float-slow">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wood_Fired_Pizza.jpg/960px-Wood_Fired_Pizza.jpg" alt="Local Pizza Place mobile app order screen" class="rounded-[1.5rem] w-full" loading="lazy" width="500" height="900" />
+          </div>
+          <div class="absolute top-8 -end-2 sm:end-4 glass rounded-lg p-3 shadow-elevated flex items-center gap-2 animate-float">
+            <span class="w-8 h-8 rounded-full bg-success/20 text-success flex items-center justify-center"><i data-lucide="bell-ring" class="w-4 h-4"></i></span>
+            <span class="text-xs font-semibold text-white">Order confirmed!</span>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 text-center lg:text-start" data-reveal="fade-left">
+          <span class="text-sm font-semibold text-accent uppercase tracking-wider">Get the app</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3 text-white">Order faster with the Local Pizza Place app</h2>
+          <p class="text-white/70 mt-4 max-w-md mx-auto lg:mx-0">Save your favorites, reorder in one tap, and get push notifications the moment your pizza is out for delivery.</p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-3 mt-8">
+            <a data-ripple href="#" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white/10 border border-white/15 hover:bg-white/15 transition-colors text-white">
+              <i data-lucide="apple" class="w-6 h-6"></i>
+              <span class="text-start"><span class="block text-[10px] text-white/60 leading-none">Download on the</span><span class="block text-sm font-semibold leading-tight">App Store</span></span>
+            </a>
+            <a data-ripple href="#" class="inline-flex items-center gap-3 px-5 py-3 rounded-lg bg-white/10 border border-white/15 hover:bg-white/15 transition-colors text-white">
+              <i data-lucide="play" class="w-6 h-6"></i>
+              <span class="text-start"><span class="block text-[10px] text-white/60 leading-none">Get it on</span><span class="block text-sm font-semibold leading-tight">Google Play</span></span>
+            </a>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-6 mt-8 text-white/70 text-sm">
+            <span class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-warning"></i> 4.9 App Store rating</span>
+            <span class="flex items-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> 25k+ downloads</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <div data-reveal="zoom-in" class="glass rounded-xl p-10 text-center shadow-elevated relative overflow-hidden">
+          <div class="absolute inset-0 bg-mesh opacity-40" aria-hidden="true"></div>
+          <div class="relative">
+            <span class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-primary/10 text-primary mb-4">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i> Subscribers get 10% off their next order
+            </span>
+            <h2 class="font-heading font-bold text-2xl sm:text-3xl">Never miss a deal</h2>
+            <p class="text-muted mt-3">Join 4,200+ locals getting first dibs on limited-time offers and new menu items.</p>
+            <form data-validate class="mt-7 flex flex-col sm:flex-row gap-3 max-w-md mx-auto" novalidate>
+              <div data-field-wrapper class="flex-1 text-start">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input id="newsletter-email" name="email" type="email" required data-field="email" placeholder="you@email.com"
+                  class="w-full px-4 py-3 rounded-md border border-border bg-body focus:border-primary outline-none text-sm" />
+                <p data-field-message class="hidden text-xs text-danger mt-1.5"></p>
+              </div>
+              <button data-ripple type="submit" class="px-6 py-3 rounded-md bg-gradient-brand text-white font-semibold shadow-glow shrink-0">Subscribe</button>
+            </form>
+            <p data-form-status class="hidden" role="status"></p>
+            <p class="text-xs text-muted mt-4">No spam, unsubscribe anytime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="py-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="text-center" data-reveal="fade-up">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Good to know</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Frequently asked questions</h2>
+        </div>
+        <div data-accordion class="mt-12 divide-y divide-border border border-border rounded-lg bg-surface">
+          <div data-accordion-item>
+            <button data-accordion-trigger aria-expanded="true" class="w-full flex items-center justify-between p-5 text-start font-semibold">
+              How long does delivery usually take?
+              <i data-accordion-icon data-lucide="chevron-down" class="w-4 h-4 rotate-180 transition-transform shrink-0"></i>
+            </button>
+            <div data-accordion-panel class="px-5 overflow-hidden transition-[max-height] duration-300" style="max-height: 200px;">
+              <p class="text-sm text-muted pb-5">Most orders arrive in 20–30 minutes. You can follow your driver in real time from your account's live order tracker.</p>
+            </div>
+          </div>
+          <div data-accordion-item>
+            <button data-accordion-trigger aria-expanded="false" class="w-full flex items-center justify-between p-5 text-start font-semibold">
+              Do you cater to allergies or dietary restrictions?
+              <i data-accordion-icon data-lucide="chevron-down" class="w-4 h-4 transition-transform shrink-0"></i>
+            </button>
+            <div data-accordion-panel class="px-5 overflow-hidden transition-[max-height] duration-300" style="max-height: 0;">
+              <p class="text-sm text-muted pb-5">Yes — gluten-free crust, dairy-free cheese and vegan toppings are available. Note any allergies in the order notes and we'll flag it in the kitchen.</p>
+            </div>
+          </div>
+          <div data-accordion-item>
+            <button data-accordion-trigger aria-expanded="false" class="w-full flex items-center justify-between p-5 text-start font-semibold">
+              What payment methods do you accept?
+              <i data-accordion-icon data-lucide="chevron-down" class="w-4 h-4 transition-transform shrink-0"></i>
+            </button>
+            <div data-accordion-panel class="px-5 overflow-hidden transition-[max-height] duration-300" style="max-height: 0;">
+              <p class="text-sm text-muted pb-5">All major credit cards, Apple Pay, Google Pay, and cash on delivery. Save a card to your account for one-tap checkout.</p>
+            </div>
+          </div>
+          <div data-accordion-item>
+            <button data-accordion-trigger aria-expanded="false" class="w-full flex items-center justify-between p-5 text-start font-semibold">
+              Can I cancel or change my order after placing it?
+              <i data-accordion-icon data-lucide="chevron-down" class="w-4 h-4 transition-transform shrink-0"></i>
+            </button>
+            <div data-accordion-panel class="px-5 overflow-hidden transition-[max-height] duration-300" style="max-height: 0;">
+              <p class="text-sm text-muted pb-5">You can cancel free of charge while your order shows "Preparing." Once it moves to "Baking" the kitchen has already started, so changes aren't guaranteed.</p>
+            </div>
+          </div>
+          <div data-accordion-item>
+            <button data-accordion-trigger aria-expanded="false" class="w-full flex items-center justify-between p-5 text-start font-semibold">
+              Do coupons and combo deals stack?
+              <i data-accordion-icon data-lucide="chevron-down" class="w-4 h-4 transition-transform shrink-0"></i>
+            </button>
+            <div data-accordion-panel class="px-5 overflow-hidden transition-[max-height] duration-300" style="max-height: 0;">
+              <p class="text-sm text-muted pb-5">One coupon code can be applied per order, and it stacks on top of combo pricing automatically at checkout — whichever gives you the better total.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DELIVERY AREA ============ -->
+    <section id="delivery" class="py-24 bg-surface-2">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div data-reveal="fade-right" class="rounded-xl overflow-hidden border border-border h-80 bg-surface flex items-center justify-center text-muted text-sm relative">
+          <div class="absolute inset-0 bg-mesh opacity-30" aria-hidden="true"></div>
+          <div class="relative flex flex-col items-center gap-2">
+            <i data-lucide="map" class="w-8 h-8"></i>
+            Delivery area map placeholder
+          </div>
+        </div>
+        <div data-reveal="fade-left">
+          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Delivery area</span>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Do we deliver to you?</h2>
+          <p class="text-muted mt-4">We deliver within a 5-mile radius of our Riverside kitchen, usually in 20–30 minutes. Enter your zip code to check.</p>
+          <form class="mt-6 flex flex-col sm:flex-row gap-3 max-w-md" onsubmit="return false">
+            <label class="flex-1"><span class="sr-only">Zip code</span>
+              <input type="text" inputmode="numeric" placeholder="Enter your zip code" class="w-full px-4 py-3 rounded-md border border-border bg-surface text-sm focus:border-primary outline-none" />
+            </label>
+            <button data-ripple type="submit" class="px-6 py-3 rounded-md bg-gradient-brand text-white font-semibold shadow-glow shrink-0">Check</button>
+          </form>
+          <ul class="mt-6 space-y-2 text-sm">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success"></i> Free delivery on orders over $30</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success"></i> Open daily 11:00 AM – 11:00 PM</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-success"></i> Contactless delivery available</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div data-reveal="fade-up" class="bg-gradient-brand rounded-xl px-8 py-14 sm:px-16 text-center relative overflow-hidden">
+          <div class="absolute -top-10 -end-10 w-56 h-56 rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl text-white">Craving a slice right now?</h2>
+          <p class="text-white/85 mt-3 max-w-xl mx-auto">Call us at (555) 010-PIZZA or order online for delivery in under 30 minutes.</p>
+          <a data-magnetic="14" href="dashboard.html" class="magnetic-btn inline-flex items-center gap-2 mt-8 px-8 py-3.5 rounded-md bg-white text-primary font-semibold">
+            Order Now <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <div id="cart-drawer" data-drawer class="fixed inset-0 z-[60] hidden opacity-0 transition-opacity duration-300 bg-secondary/60" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+    <div class="drawer-panel translate-x-full rtl:-translate-x-full absolute inset-y-0 end-0 w-full max-w-md bg-surface shadow-elevated flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-border">
+        <h2 id="cart-drawer-title" class="font-heading font-bold text-xl">Your Order</h2>
+        <button type="button" data-drawer-close aria-label="Close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex-1 overflow-y-auto p-6 space-y-4">
+        <div class="flex gap-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/960px-Eq_it-na_pizza-margherita_sep2005_sml.jpg" alt="" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+          <div class="flex-1"><p class="font-semibold text-sm">Classic Margherita</p><p class="text-xs text-muted">Large · Thin crust</p><p class="font-semibold text-primary text-sm mt-1">$14.50</p></div>
+          <button type="button" aria-label="Remove item" class="text-muted hover:text-danger"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>
+        <div class="flex gap-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Pepperoni_pizza_slice_on_a_red_plate.jpg/960px-Pepperoni_pizza_slice_on_a_red_plate.jpg" alt="" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+          <div class="flex-1"><p class="font-semibold text-sm">Spicy Pepperoni</p><p class="text-xs text-muted">Medium · Regular crust</p><p class="font-semibold text-primary text-sm mt-1">$16.90</p></div>
+          <button type="button" aria-label="Remove item" class="text-muted hover:text-danger"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>
+        <div class="flex gap-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Garlic_bread_-_on_plate%2C_ready_to_eat.jpg/960px-Garlic_bread_-_on_plate%2C_ready_to_eat.jpg" alt="" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+          <div class="flex-1"><p class="font-semibold text-sm">Garlic Bread</p><p class="text-xs text-muted">Regular</p><p class="font-semibold text-primary text-sm mt-1">$6.50</p></div>
+          <button type="button" aria-label="Remove item" class="text-muted hover:text-danger"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+        </div>
+      </div>
+      <div class="p-6 border-t border-border">
+        <div class="flex justify-between text-sm mb-2"><span class="text-muted">Subtotal</span><span class="font-semibold">$37.90</span></div>
+        <div class="flex justify-between text-sm mb-4"><span class="text-muted">Delivery fee</span><span class="font-semibold">Free</span></div>
+        <div class="flex justify-between font-heading font-bold text-lg mb-5"><span>Total</span><span>$37.90</span></div>
+        <a data-ripple href="dashboard.html" class="block text-center w-full py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Proceed to Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-secondary text-white/70 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div>
+        <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl text-white">
+          <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+          Local Pizza Place
+        </a>
+        <p class="text-sm mt-4 max-w-xs">Wood-fired pizza, family recipes, delivered hot since 2011.</p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Explore</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="#menu" class="hover:text-white transition-colors">Full menu</a></li>
+          <li><a href="about.html" class="hover:text-white transition-colors">About us</a></li>
+          <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing &amp; deals</a></li>
+          <li><a href="reservations.html" class="hover:text-white transition-colors">Reservations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Account</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="dashboard.html" class="hover:text-white transition-colors">My orders</a></li>
+          <li><a href="dashboard.html#favorites" class="hover:text-white transition-colors">Favorites</a></li>
+          <li><a href="dashboard.html#coupons" class="hover:text-white transition-colors">Coupons</a></li>
+          <li><a href="login.html" class="hover:text-white transition-colors">Login</a></li>
+          <li><a href="register.html" class="hover:text-white transition-colors">Create account</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Contact</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (555) 010-7499</li>
+          <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> 88 Sunset Ave, Riverside</li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold text-sm uppercase tracking-wider">More</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="index-2.html" class="hover:text-white transition-colors">Catering &amp; events</a></li>
+          <li><a href="admin.html" class="hover:text-white transition-colors">Staff portal</a></li>
+          <li><a href="business/index.html" class="hover:text-white transition-colors flex items-center gap-1.5"><i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Stackly Business Template</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 text-xs text-center">
+      <p>&copy; 2026 Local Pizza Place. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GALLERY LIGHTBOX MODAL -->
+  <div id="gallery-modal" data-modal class="fixed inset-0 z-[60] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center bg-secondary/80 p-4" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title">
+    <div class="modal-panel opacity-0 scale-95 glass rounded-xl shadow-elevated w-full max-w-2xl p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 id="gallery-modal-title" data-gallery-caption-target class="font-heading font-semibold text-sm sm:text-base text-white">Photo</h2>
+        <button type="button" data-modal-close aria-label="Close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-white/10 text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <img data-gallery-image-target src="" alt="" class="w-full rounded-lg" width="700" height="700" />
+    </div>
+  </div>
+
+  <script src="assets/js/modules/theme.js" defer></script>
+  <script src="assets/js/modules/nav.js" defer></script>
+  <script src="assets/js/modules/reveal.js" defer></script>
+  <script src="assets/js/modules/counter.js" defer></script>
+  <script src="assets/js/modules/forms.js" defer></script>
+  <script src="assets/js/modules/components.js" defer></script>
+  <script src="assets/js/modules/micro.js" defer></script>
+  <script src="assets/js/modules/favorites.js" defer></script>
+  <script src="assets/js/modules/ripple.js" defer></script>
+  <script src="assets/js/modules/carousel.js" defer></script>
+  <script src="assets/js/modules/paginate.js" defer></script>
+  <script src="assets/js/modules/cart.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.querySelectorAll("[data-gallery-src]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const img = document.querySelector("[data-gallery-image-target]");
+        const caption = document.querySelector("[data-gallery-caption-target]");
+        if (img) {
+          img.src = btn.dataset.gallerySrc;
+          img.alt = btn.dataset.galleryCaption || "";
+        }
+        if (caption) caption.textContent = btn.dataset.galleryCaption || "Photo";
+      });
+    });
+
+    let cartCount = 3;
+    const cartCountEl = document.querySelector("[data-cart-count]");
+    document.querySelectorAll("[data-add-to-cart]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        cartCount += 1;
+        if (cartCountEl) cartCountEl.textContent = cartCount;
+        cartCountEl?.animate(
+          [{ transform: "scale(1)" }, { transform: "scale(1.4)" }, { transform: "scale(1)" }],
+          { duration: 320, easing: "ease-out" }
+        );
+        window.dispatchEvent(new CustomEvent("stackly:toast", { detail: { type: "success", message: "Added to your order." } }));
+      });
+    });
+  </script>
+</body>
+</html>

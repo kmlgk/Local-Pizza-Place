@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Local Pizza Place</title>
+  <meta name="description" content="Log in to your Local Pizza Place account to track orders and reorder your favorites." />
+  <link rel="canonical" href="https://example.com/login.html" />
+  <meta name="theme-color" content="#EA580C" />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23EA580C'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23FEF3C7'/%3E%3Ccircle cx='13' cy='13' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='19' cy='14' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='16' cy='19' r='1.6' fill='%23DC2626'/%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("stackly-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", t === "dark");
+        var d = localStorage.getItem("stackly-dir"); if (d) document.documentElement.dir = d;
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+</head>
+<body class="font-body bg-body text-ink antialiased">
+  <div id="preloader" class="fixed inset-0 z-[300] flex items-center justify-center bg-body" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <div class="relative w-16 h-16">
+        <div class="absolute inset-0 rounded-full border-4 border-border"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary preloader-spin"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-2xl">🍕</div>
+      </div>
+      <span class="font-heading font-bold text-xs tracking-widest uppercase text-muted">Loading</span>
+    </div>
+  </div>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <main id="main" class="min-h-screen grid lg:grid-cols-2">
+    <!-- FORM SIDE -->
+    <div class="flex flex-col justify-center px-6 sm:px-12 lg:px-20 py-12">
+      <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl mb-10">
+        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+        Local Pizza Place
+      </a>
+
+      <div data-reveal="fade-up" class="max-w-md w-full mx-auto">
+        <h1 class="font-heading font-extrabold text-3xl">Welcome back</h1>
+        <p class="text-muted mt-2">Log in to track your order and reorder your favorites.</p>
+
+        <div class="grid grid-cols-2 gap-3 mt-8">
+          <button type="button" class="flex items-center justify-center gap-2 py-2.5 rounded-md border border-border hover:bg-surface-2 text-sm font-medium transition-colors">
+            <i data-lucide="chrome" class="w-4 h-4"></i> Google
+          </button>
+          <button type="button" class="flex items-center justify-center gap-2 py-2.5 rounded-md border border-border hover:bg-surface-2 text-sm font-medium transition-colors">
+            <i data-lucide="apple" class="w-4 h-4"></i> Apple
+          </button>
+        </div>
+        <div class="flex items-center gap-3 my-7">
+          <span class="h-px bg-border flex-1"></span><span class="text-xs text-muted">OR</span><span class="h-px bg-border flex-1"></span>
+        </div>
+
+        <form data-validate class="space-y-5" novalidate>
+          <div data-field-wrapper>
+            <label for="login-email" class="text-sm font-medium">Email address</label>
+            <input id="login-email" name="email" type="email" required data-field="email" placeholder="you@email.com" class="w-full mt-1.5 px-4 py-3 rounded-md border border-border bg-surface text-sm focus:border-primary outline-none" />
+            <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+          </div>
+          <div data-field-wrapper>
+            <div class="flex items-center justify-between">
+              <label for="login-password" class="text-sm font-medium">Password</label>
+              <a href="#" class="text-xs font-semibold text-primary">Forgot password?</a>
+            </div>
+            <div class="relative mt-1.5">
+              <input id="login-password" name="password" type="password" required data-field="password" placeholder="••••••••" class="w-full px-4 py-3 rounded-md border border-border bg-surface text-sm focus:border-primary outline-none pe-11" />
+              <button type="button" data-password-toggle aria-label="Show password" class="absolute top-1/2 -translate-y-1/2 end-3 text-muted">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+          </div>
+          <label class="flex items-center gap-2 text-sm">
+            <input type="checkbox" class="w-4 h-4 rounded border-border text-primary focus:ring-primary" /> Remember me for 30 days
+          </label>
+          <button data-ripple type="submit" class="w-full py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Log In</button>
+          <p data-form-status class="hidden" role="status"></p>
+        </form>
+
+        <p class="text-sm text-muted text-center mt-8">Don't have an account? <a href="register.html" class="font-semibold text-primary">Sign up free</a></p>
+      </div>
+    </div>
+
+    <!-- VISUAL SIDE -->
+    <div class="hidden lg:flex relative overflow-hidden bg-secondary items-center justify-center p-16">
+      <div class="absolute inset-0 bg-mesh opacity-60" aria-hidden="true"></div>
+      <div class="absolute -top-10 -end-10 w-72 h-72 rounded-full bg-accent/20 blur-3xl animate-float" aria-hidden="true"></div>
+      <div class="absolute -bottom-14 -start-10 w-60 h-60 rounded-full bg-primary/15 blur-3xl" data-parallax="0.1" aria-hidden="true"></div>
+      <div data-reveal="zoom-in" class="relative glass rounded-xl shadow-elevated p-3 max-w-md">
+        <img src="https://picsum.photos/seed/pizza-hero/700/560" alt="Fresh wood-fired pizza" class="rounded-lg w-full" loading="lazy" width="700" height="560" />
+        <div class="absolute -bottom-6 -start-6 glass rounded-lg p-4 shadow-elevated flex items-center gap-3 animate-float-slow">
+          <span class="w-10 h-10 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="timer" class="w-5 h-5"></i></span>
+          <div><p class="text-sm font-semibold text-white">22 min average</p><p class="text-xs text-white/60">Oven to doorstep</p></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/modules/theme.js" defer></script>
+  <script src="assets/js/modules/nav.js" defer></script>
+  <script src="assets/js/modules/reveal.js" defer></script>
+  <script src="assets/js/modules/counter.js" defer></script>
+  <script src="assets/js/modules/forms.js" defer></script>
+  <script src="assets/js/modules/components.js" defer></script>
+  <script src="assets/js/modules/micro.js" defer></script>
+  <script src="assets/js/modules/favorites.js" defer></script>
+  <script src="assets/js/modules/ripple.js" defer></script>
+  <script src="assets/js/modules/carousel.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.querySelectorAll("[data-password-toggle]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = btn.previousElementSibling;
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        btn.innerHTML = isPassword ? '<i data-lucide="eye-off" class="w-4 h-4"></i>' : '<i data-lucide="eye" class="w-4 h-4"></i>';
+        window.lucide?.createIcons();
+      });
+    });
+  </script>
+</body>
+</html>

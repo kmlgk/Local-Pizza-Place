@@ -1,0 +1,366 @@
+/* =========================================================================
+   Local Pizza Place — Core Stylesheet
+   Design tokens, glassmorphism, gradients, motion system, dark/light, RTL.
+   Loaded AFTER the Tailwind CDN script + inline config on every page.
+   ========================================================================= */
+
+/* ---------- 1. Design Tokens (CSS Variables) ---------- */
+:root {
+  /* Brand palette — RGB triplets so Tailwind's rgb(var(--x) / <alpha-value>) works */
+  --color-primary: 234 88 12;      /* #EA580C — oven orange */
+  --color-secondary: 15 23 42;     /* #0F172A */
+  --color-accent: 220 38 38;       /* #DC2626 — tomato red */
+  --color-success: 22 163 74;      /* #16A34A */
+  --color-warning: 245 158 11;     /* #F59E0B */
+  --color-danger: 220 38 38;       /* #DC2626 */
+  --color-light: 248 250 252;      /* #F8FAFC */
+  --color-dark: 2 6 23;            /* #020617 */
+
+  /* Semantic surface tokens — swapped by theme */
+  --bg-body: 255 255 255;
+  --bg-surface: 255 255 255;
+  --bg-surface-2: 248 250 252;
+  --text-body: 15 23 42;
+  --text-muted: 100 116 139;
+  --border-color: 226 232 240;
+
+  --glass-bg: 255 255 255 / 0.6;
+  --glass-border: 255 255 255 / 0.4;
+  --glass-blur: 16px;
+
+  --shadow-color: 15 23 42;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+}
+
+html.dark {
+  --color-primary: 251 146 60;     /* #FB923C — lighter orange for dark bg contrast */
+  --color-accent: 248 113 113;     /* #F87171 — lighter red for dark bg contrast */
+
+  --bg-body: 2 6 23;
+  --bg-surface: 15 23 42;
+  --bg-surface-2: 22 30 51;
+  --text-body: 241 245 249;
+  --text-muted: 148 163 184;
+  --border-color: 30 41 59;
+
+  --glass-bg: 15 23 42 / 0.55;
+  --glass-border: 255 255 255 / 0.08;
+
+  --shadow-color: 0 0 0;
+  color-scheme: dark;
+}
+
+/* ---------- 2. Base ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--color-primary) / 0.4) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-primary) / 0.4);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover { background: rgb(var(--color-primary) / 0.7); }
+
+html { scroll-behavior: smooth; }
+body {
+  background: rgb(var(--bg-body));
+  color: rgb(var(--text-body));
+  transition: background-color var(--dur-base) var(--ease-out-expo), color var(--dur-base) var(--ease-out-expo);
+}
+
+::selection { background: rgb(var(--color-primary) / 0.25); color: rgb(var(--color-secondary)); }
+html.dark ::selection { color: rgb(var(--color-light)); }
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  background: rgb(var(--color-primary));
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  transition: top var(--dur-base) var(--ease-out-expo);
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- 3. Glassmorphism ---------- */
+.glass {
+  background: rgb(var(--glass-bg));
+  border: 1px solid rgb(var(--glass-border));
+  backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(160%);
+}
+
+.card-elevate {
+  transition: transform var(--dur-base) var(--ease-out-expo),
+              box-shadow var(--dur-base) var(--ease-out-expo),
+              border-color var(--dur-base) var(--ease-out-expo);
+}
+.card-elevate:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgb(var(--shadow-color) / 0.25);
+  border-color: rgb(var(--color-primary) / 0.4);
+}
+
+/* ---------- 4. Gradients ---------- */
+.text-gradient {
+  background-image: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background-image: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+}
+
+.bg-gradient-radial-fade {
+  background-image: radial-gradient(60% 60% at 50% 0%, rgb(var(--color-primary) / 0.18), transparent 70%);
+}
+
+.bg-mesh {
+  background-image:
+    radial-gradient(40% 40% at 15% 20%, rgb(var(--color-primary) / 0.25), transparent 60%),
+    radial-gradient(35% 35% at 85% 15%, rgb(var(--color-accent) / 0.22), transparent 60%),
+    radial-gradient(45% 45% at 50% 100%, rgb(var(--color-primary) / 0.15), transparent 60%);
+  background-size: 200% 200%;
+  animation: meshMove 18s ease-in-out infinite alternate;
+}
+@keyframes meshMove {
+  0% { background-position: 0% 0%, 100% 0%, 50% 100%; }
+  100% { background-position: 10% 10%, 90% 20%, 45% 90%; }
+}
+
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(rgb(var(--bg-surface)), rgb(var(--bg-surface))),
+    linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+}
+
+/* ---------- 5. Motion / Reveal-on-scroll (AOS-like, JS-driven, CSS fallback) ---------- */
+[data-reveal] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity var(--dur-slow) var(--ease-out-expo), transform var(--dur-slow) var(--ease-out-expo);
+}
+[data-reveal="fade-up"] { transform: translateY(28px); }
+[data-reveal="fade-down"] { transform: translateY(-28px); }
+[data-reveal="fade-left"] { transform: translateX(28px); }
+[data-reveal="fade-right"] { transform: translateX(-28px); }
+[data-reveal="zoom-in"] { transform: scale(0.94); }
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+/* No-JS / reduced-motion fallback: content must never stay hidden */
+.no-js [data-reveal] { opacity: 1; transform: none; transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- 5b. Page-load transition ---------- */
+html:not(.no-js) body { opacity: 0; transform: translateY(8px); }
+html:not(.no-js) body.page-ready {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not(.no-js) body { opacity: 1; transform: none; }
+}
+
+/* ---------- 5b-2. Sticky header scroll state ---------- */
+[data-site-header] { transition: box-shadow 0.3s var(--ease-out-expo), background-color 0.3s var(--ease-out-expo); }
+[data-site-header] > div:first-child { transition: height 0.3s var(--ease-out-expo); }
+[data-site-header].is-scrolled {
+  box-shadow: 0 10px 30px -14px rgb(var(--shadow-color) / 0.35);
+  background-color: rgb(var(--bg-body) / 0.95);
+}
+[data-site-header].is-scrolled > div:first-child { height: 4.25rem; }
+
+/* ---------- 5b-3. Glow CTA hover intensify ---------- */
+.shadow-glow { transition: box-shadow 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo); }
+a.shadow-glow:hover, button.shadow-glow:hover {
+  box-shadow: 0 0 42px -4px rgb(var(--color-primary) / 0.65);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  a.shadow-glow:hover, button.shadow-glow:hover { transform: none; }
+}
+
+/* ---------- 5b-4. Header nav redesign: spacing + animated underline ---------- */
+nav[aria-label="Primary"] { gap: 2rem; }
+nav[aria-label="Primary"] > a {
+  position: relative;
+  padding-bottom: 4px;
+}
+nav[aria-label="Primary"] > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(var(--color-primary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+nav[aria-label="Primary"] > a:hover::after,
+nav[aria-label="Primary"] > a.text-primary::after {
+  transform: scaleX(1);
+}
+[dir="rtl"] nav[aria-label="Primary"] > a::after { transform-origin: right; }
+@media (prefers-reduced-motion: reduce) {
+  nav[aria-label="Primary"] > a::after { transition: none; }
+}
+
+/* ---------- 5b-5. Bolder logo wordmark ---------- */
+[data-site-header] a.font-heading.font-extrabold {
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+}
+[data-site-header] a.font-heading.font-extrabold span {
+  transition: transform 0.3s var(--ease-spring, var(--ease-out-expo));
+}
+[data-site-header] a.font-heading.font-extrabold:hover span {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+/* ---------- 5c. Preloader ---------- */
+#preloader {
+  transition: opacity 0.45s var(--ease-out-expo), visibility 0.45s var(--ease-out-expo);
+}
+#preloader.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader-spin { animation: spin 0.9s linear infinite; }
+.no-js #preloader { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  #preloader { transition: none; }
+  .preloader-spin { animation: none; }
+}
+
+.animate-float { animation: floatY 6s var(--ease-out-expo) infinite; }
+.animate-float-slow { animation: floatY 10s var(--ease-out-expo) infinite; }
+.animate-float-delay { animation: floatY 6s var(--ease-out-expo) infinite; animation-delay: 1.2s; }
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+
+.animate-spin-slow { animation: spin 14s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.animate-pulse-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgb(var(--color-primary) / 0.6);
+  animation: pulseRing 2.4s var(--ease-out-expo) infinite;
+}
+@keyframes pulseRing {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+[data-tab-trigger][aria-selected="true"] { box-shadow: 0 10px 24px -8px rgb(var(--color-primary) / 0.55); }
+
+.animate-marquee { animation: marquee 26s linear infinite; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Magnetic buttons (JS sets --mx/--my via transform) */
+.magnetic-btn { transition: transform var(--dur-fast) var(--ease-spring); }
+
+/* ---------- 6. Skeleton Loading ---------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgb(var(--border-color) / 0.6);
+  border-radius: var(--radius-md);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.45), transparent);
+  animation: shimmer 1.6s infinite;
+}
+html.dark .skeleton::after {
+  background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.08), transparent);
+}
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+/* ---------- 7. Component helpers ---------- */
+.toast { transition: transform var(--dur-base) var(--ease-spring), opacity var(--dur-base) var(--ease-out-expo); }
+.modal-panel { transition: transform var(--dur-base) var(--ease-spring), opacity var(--dur-base) var(--ease-out-expo); }
+.drawer-panel { transition: transform var(--dur-base) var(--ease-out-expo); }
+.dropdown-panel { transition: opacity var(--dur-fast) var(--ease-out-expo), transform var(--dur-fast) var(--ease-out-expo); }
+
+.tooltip { position: relative; }
+.tooltip [role="tooltip"] {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(4px);
+  transition: opacity var(--dur-fast) ease, transform var(--dur-fast) ease;
+}
+.tooltip:hover [role="tooltip"],
+.tooltip:focus-within [role="tooltip"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated counter number tick */
+[data-counter] { font-variant-numeric: tabular-nums; }
+
+/* Line clamp fallback (in case CDN Tailwind build lacks plugin) */
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ---------- 8. RTL support ---------- */
+[dir="rtl"] .flip-rtl { transform: scaleX(-1); }
+[dir="rtl"] .animate-marquee { animation-direction: reverse; }
+
+/* ---------- 9. Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 10. Print ---------- */
+@media print {
+  header, footer, .no-print { display: none !important; }
+}

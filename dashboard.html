@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account — Local Pizza Place</title>
+  <meta name="description" content="Track your live pizza order, view order history and quickly reorder your favorites." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23EA580C'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23FEF3C7'/%3E%3Ccircle cx='13' cy='13' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='19' cy='14' r='1.6' fill='%23DC2626'/%3E%3Ccircle cx='16' cy='19' r='1.6' fill='%23DC2626'/%3E%3C/svg%3E" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("stackly-theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.classList.toggle("dark", t === "dark");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+  <style>
+    .tracker-step.is-done .tracker-dot { background: rgb(var(--color-primary)); color: #fff; }
+    .tracker-step.is-active .tracker-dot { background: rgb(var(--color-primary)); color: #fff; }
+    .tracker-step.is-done .tracker-line, .tracker-step.is-active ~ .tracker-step .tracker-line { background: rgb(var(--border-color)); }
+    .tracker-line-fill { transition: width 900ms var(--ease-out-expo); }
+  </style>
+</head>
+<body class="font-body bg-body text-ink antialiased">
+  <div id="preloader" class="fixed inset-0 z-[300] flex items-center justify-center bg-body" aria-hidden="true">
+    <div class="flex flex-col items-center gap-4">
+      <div class="relative w-16 h-16">
+        <div class="absolute inset-0 rounded-full border-4 border-border"></div>
+        <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-primary preloader-spin"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-2xl">🍕</div>
+      </div>
+      <span class="font-heading font-bold text-xs tracking-widest uppercase text-muted">Loading</span>
+    </div>
+  </div>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="hidden md:block bg-secondary text-white/70 text-xs relative z-40">
+    <div class="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Mon–Sun, 11am–11pm</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Riverside, CA</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:+15551234567" class="flex items-center gap-1.5 hover:text-white transition-colors"><i data-lucide="phone" class="w-3.5 h-3.5"></i> (555) 123-4567</a>
+        <span class="flex items-center gap-3">
+          <a href="#" aria-label="Instagram" class="hover:text-white transition-colors"><i data-lucide="instagram" class="w-3.5 h-3.5"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-3.5 h-3.5"></i></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <header data-site-header class="sticky top-0 z-50 transition-all duration-300 bg-body/80 backdrop-blur-lg border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-2 font-heading font-extrabold text-xl">
+        <span class="w-9 h-9 rounded-full bg-gradient-brand flex items-center justify-center text-white"><i data-lucide="pizza" class="w-5 h-5"></i></span>
+        Local Pizza Place
+      </a>
+      <nav class="hidden lg:flex items-center gap-5" aria-label="Primary">
+        <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
+        <a href="index.html#menu" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
+        <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+        <div data-dropdown class="relative">
+          <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">Company <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          <div data-dropdown-panel class="dropdown-panel opacity-0 pointer-events-none scale-95 absolute top-full mt-3 start-0 w-56 glass shadow-elevated rounded-lg p-2 origin-top">
+            <a href="services.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Services</a>
+            <a href="blog.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Blog</a>
+            <a href="pricing.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Pricing &amp; Deals</a>
+          </div>
+        </div>
+        <a href="reservations.html" class="text-sm font-medium hover:text-primary transition-colors">Reservations</a>
+        <a href="dashboard.html" class="text-sm font-semibold text-primary">My Account</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-theme-toggle aria-pressed="false" aria-label="Toggle dark mode" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+        </button>
+        <button type="button" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
+          <i data-lucide="languages" class="w-5 h-5"></i>
+        </button>
+        <a href="#notifications" class="relative w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2" aria-label="Notifications">
+          <i data-lucide="bell" class="w-5 h-5"></i>
+          <span class="absolute top-2 end-2 w-2 h-2 rounded-full bg-danger"></span>
+        </a>
+        <a data-ripple href="index.html#menu" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
+          <i data-lucide="plus" class="w-4 h-4"></i> New Order
+        </a>
+        <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div data-menu-backdrop class="fixed inset-0 bg-secondary/60 z-40 opacity-0 pointer-events-none transition-opacity lg:hidden"></div>
+  <aside id="mobile-menu" data-mobile-menu class="fixed inset-y-0 start-0 z-50 w-80 max-w-[85%] bg-surface -translate-x-full transition-transform duration-300 ease-out lg:hidden p-6 overflow-y-auto">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-heading font-extrabold text-lg">Local Pizza Place</span>
+      <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+    </div>
+    <nav class="flex flex-col gap-1">
+      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home</a>
+      <a href="index.html#menu" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
+      <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
+      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing &amp; Deals</a>
+      <a href="reservations.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Reservations</a>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
+    </nav>
+  </aside>
+
+  <main id="main" class="max-w-7xl mx-auto px-6 py-10">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between mb-8" data-reveal="fade-up">
+      <div class="flex items-center gap-4">
+        <img src="https://i.pravatar.cc/120?img=19" alt="Jenna Rivers profile photo" class="w-14 h-14 rounded-full object-cover" width="56" height="56" />
+        <div>
+          <h1 class="font-heading font-bold text-2xl">Hey Jenna 👋</h1>
+          <p class="text-muted text-sm">Here's what's happening with your orders.</p>
+        </div>
+      </div>
+      <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow shrink-0">
+        <i data-lucide="plus" class="w-4 h-4"></i> Place New Order
+      </a>
+    </div>
+
+    <div data-tabs data-tabs-hash-sync="true" class="grid lg:grid-cols-[220px_1fr] gap-6">
+      <nav class="flex lg:flex-col gap-1 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0" aria-label="Account sections">
+        <button data-tab-trigger="current" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="map-pin" class="w-4 h-4"></i> Current Order</button>
+        <button data-tab-trigger="history" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="history" class="w-4 h-4"></i> Order History</button>
+        <button data-tab-trigger="favorites" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="heart" class="w-4 h-4"></i> Favorites</button>
+        <button data-tab-trigger="coupons" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="ticket-percent" class="w-4 h-4"></i> Coupons</button>
+        <button data-tab-trigger="notifications" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="bell" class="w-4 h-4"></i> Notifications</button>
+        <button data-tab-trigger="addresses" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="home" class="w-4 h-4"></i> Saved Addresses</button>
+        <button data-tab-trigger="profile" class="flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold whitespace-nowrap transition-colors"><i data-lucide="user" class="w-4 h-4"></i> Profile</button>
+      </nav>
+
+      <div>
+        <!-- ============ CURRENT ORDER ============ -->
+        <div data-tab-panel="current" class="space-y-6">
+          <!-- Skeleton: shown briefly while the "live" order status loads -->
+          <div data-order-skeleton class="p-6 sm:p-8 rounded-xl border border-border bg-surface space-y-6">
+            <div class="flex items-center justify-between gap-3">
+              <div class="space-y-2"><div class="skeleton h-3 w-24"></div><div class="skeleton h-5 w-56"></div></div>
+              <div class="skeleton h-7 w-32 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-4 gap-3 pt-4">
+              <div class="flex flex-col items-center gap-3"><div class="skeleton w-12 h-12 rounded-full"></div><div class="skeleton h-3 w-16"></div></div>
+              <div class="flex flex-col items-center gap-3"><div class="skeleton w-12 h-12 rounded-full"></div><div class="skeleton h-3 w-16"></div></div>
+              <div class="flex flex-col items-center gap-3"><div class="skeleton w-12 h-12 rounded-full"></div><div class="skeleton h-3 w-16"></div></div>
+              <div class="flex flex-col items-center gap-3"><div class="skeleton w-12 h-12 rounded-full"></div><div class="skeleton h-3 w-16"></div></div>
+            </div>
+          </div>
+
+          <div data-order-content class="hidden p-6 sm:p-8 rounded-xl border border-border bg-surface card-elevate relative overflow-hidden">
+            <div class="absolute inset-0 bg-mesh opacity-20 dark:opacity-10" aria-hidden="true"></div>
+            <div class="relative">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs font-semibold text-muted uppercase tracking-wider">Order #10234</p>
+                  <h2 class="font-heading font-bold text-xl mt-1">2x Pepperoni Pizza, 1x Garlic Bread</h2>
+                </div>
+                <span class="px-3 py-1.5 rounded-full text-xs font-bold bg-warning/15 text-warning flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-warning animate-pulse"></span> Out for delivery
+                </span>
+              </div>
+
+              <!-- LIVE TIMELINE -->
+              <div class="mt-10 mb-4">
+                <div class="grid grid-cols-4 relative">
+                  <div class="absolute top-6 start-[12%] end-[12%] h-1 bg-border rounded-full" aria-hidden="true"></div>
+                  <div class="absolute top-6 start-[12%] h-1 bg-gradient-brand rounded-full tracker-line-fill" style="width:63%" aria-hidden="true"></div>
+
+                  <div class="tracker-step is-done relative flex flex-col items-center text-center gap-3">
+                    <span class="tracker-dot relative z-10 w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white shadow-glow"><i data-lucide="check" class="w-5 h-5"></i></span>
+                    <div><p class="text-xs sm:text-sm font-semibold">Order Placed</p><p class="text-[11px] text-muted">6:02 PM</p></div>
+                  </div>
+                  <div class="tracker-step is-done relative flex flex-col items-center text-center gap-3">
+                    <span class="tracker-dot relative z-10 w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white shadow-glow"><i data-lucide="chef-hat" class="w-5 h-5"></i></span>
+                    <div><p class="text-xs sm:text-sm font-semibold">Preparing</p><p class="text-[11px] text-muted">6:05 PM</p></div>
+                  </div>
+                  <div class="tracker-step is-active relative flex flex-col items-center text-center gap-3">
+                    <span class="tracker-dot relative z-10 w-12 h-12 rounded-full flex items-center justify-center bg-primary text-white shadow-glow animate-pulse-ring"><i data-lucide="bike" class="w-5 h-5"></i></span>
+                    <div><p class="text-xs sm:text-sm font-semibold">Out for Delivery</p><p class="text-[11px] text-muted">6:24 PM</p></div>
+                  </div>
+                  <div class="tracker-step relative flex flex-col items-center text-center gap-3">
+                    <span class="tracker-dot relative z-10 w-12 h-12 rounded-full flex items-center justify-center bg-surface-2 text-muted border-2 border-border"><i data-lucide="party-popper" class="w-5 h-5"></i></span>
+                    <div><p class="text-xs sm:text-sm font-semibold text-muted">Delivered</p><p class="text-[11px] text-muted">Est. 6:35 PM</p></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 mt-10 pt-6 border-t border-border">
+                <div class="flex items-center gap-3">
+                  <img src="https://i.pravatar.cc/80?img=68" alt="" class="w-11 h-11 rounded-full" width="44" height="44" />
+                  <div class="text-sm"><p class="font-semibold">Marco, your driver</p><p class="text-xs text-muted">On a scooter · 0.8 mi away</p></div>
+                </div>
+                <div class="flex gap-2">
+                  <a href="tel:+15550102030" class="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-surface-2"><i data-lucide="phone" class="w-4 h-4"></i></a>
+                  <button type="button" class="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-surface-2"><i data-lucide="message-circle" class="w-4 h-4"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK REORDER -->
+          <div data-reveal="fade-up">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="font-heading font-bold text-xl">Quick reorder</h2>
+              <button data-tab-trigger="history" class="text-sm font-semibold text-primary">View all orders</button>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
+                <img src="https://picsum.photos/seed/pizza1/160/160" alt="Classic Margherita" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+                <div class="flex-1 min-w-0">
+                  <p class="font-semibold text-sm truncate">Classic Margherita</p>
+                  <p class="text-xs text-muted mt-0.5">Ordered 12 times</p>
+                  <button type="button" class="mt-2 text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
+                <img src="https://picsum.photos/seed/combo1/160/160" alt="Family Combo" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+                <div class="flex-1 min-w-0">
+                  <p class="font-semibold text-sm truncate">Family Combo</p>
+                  <p class="text-xs text-muted mt-0.5">Ordered 8 times</p>
+                  <button type="button" class="mt-2 text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button>
+                </div>
+              </div>
+              <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
+                <img src="https://picsum.photos/seed/pizza2/160/160" alt="Spicy Pepperoni" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+                <div class="flex-1 min-w-0">
+                  <p class="font-semibold text-sm truncate">Spicy Pepperoni</p>
+                  <p class="text-xs text-muted mt-0.5">Ordered 5 times</p>
+                  <button type="button" class="mt-2 text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ ORDER HISTORY ============ -->
+        <div data-tab-panel="history" class="hidden rounded-xl border border-border bg-surface card-elevate overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm min-w-[640px]">
+              <thead><tr class="text-start text-muted text-xs uppercase">
+                <th class="text-start font-medium p-4">Order</th><th class="text-start font-medium p-4">Date</th><th class="text-start font-medium p-4">Items</th><th class="text-start font-medium p-4">Status</th><th class="text-end font-medium p-4">Total</th><th class="p-4"></th>
+              </tr></thead>
+              <tbody class="divide-y divide-border">
+                <tr><td class="p-4 font-medium">#10234</td><td class="p-4 text-muted">Jul 14, 2026</td><td class="p-4 text-muted">2x Pepperoni, Garlic Bread</td><td class="p-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Out for delivery</span></td><td class="p-4 text-end font-semibold">$86.20</td><td class="p-4 text-end"><button type="button" class="text-primary text-xs font-semibold flex items-center gap-1 ms-auto"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button></td></tr>
+                <tr><td class="p-4 font-medium">#10198</td><td class="p-4 text-muted">Jul 07, 2026</td><td class="p-4 text-muted">Family Combo</td><td class="p-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-success/10 text-success">Delivered</span></td><td class="p-4 text-end font-semibold">$39.99</td><td class="p-4 text-end"><button type="button" class="text-primary text-xs font-semibold flex items-center gap-1 ms-auto"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button></td></tr>
+                <tr><td class="p-4 font-medium">#10165</td><td class="p-4 text-muted">Jun 28, 2026</td><td class="p-4 text-muted">Veggie Supreme, Iced Tea x2</td><td class="p-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-success/10 text-success">Delivered</span></td><td class="p-4 text-end font-semibold">$22.90</td><td class="p-4 text-end"><button type="button" class="text-primary text-xs font-semibold flex items-center gap-1 ms-auto"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button></td></tr>
+                <tr><td class="p-4 font-medium">#10122</td><td class="p-4 text-muted">Jun 19, 2026</td><td class="p-4 text-muted">Classic Margherita</td><td class="p-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-danger/10 text-danger">Cancelled</span></td><td class="p-4 text-end font-semibold">$0.00</td><td class="p-4 text-end"><button type="button" class="text-primary text-xs font-semibold flex items-center gap-1 ms-auto"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button></td></tr>
+                <tr><td class="p-4 font-medium">#10088</td><td class="p-4 text-muted">Jun 10, 2026</td><td class="p-4 text-muted">BBQ Chicken, Wings x8</td><td class="p-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-success/10 text-success">Delivered</span></td><td class="p-4 text-end font-semibold">$28.40</td><td class="p-4 text-end"><button type="button" class="text-primary text-xs font-semibold flex items-center gap-1 ms-auto"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Reorder</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex items-center justify-between p-4 border-t border-border text-sm">
+            <p class="text-muted">Showing 1–5 of 42 orders</p>
+            <nav aria-label="Order history pagination" class="flex items-center gap-2">
+              <a href="#" aria-label="Previous page" class="w-9 h-9 rounded-md border border-border flex items-center justify-center hover:bg-surface-2"><i data-lucide="chevron-left" class="w-4 h-4 rtl:rotate-180"></i></a>
+              <a data-ripple href="#" aria-current="page" class="w-9 h-9 rounded-md bg-gradient-brand text-white flex items-center justify-center font-semibold text-xs">1</a>
+              <a href="#" class="w-9 h-9 rounded-md border border-border flex items-center justify-center hover:bg-surface-2 font-semibold text-xs">2</a>
+              <a href="#" aria-label="Next page" class="w-9 h-9 rounded-md border border-border flex items-center justify-center hover:bg-surface-2"><i data-lucide="chevron-right" class="w-4 h-4 rtl:rotate-180"></i></a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- ============ FAVORITES ============ -->
+        <div data-tab-panel="favorites" class="hidden space-y-5">
+          <div class="flex items-center justify-between">
+            <h2 class="font-heading font-bold text-xl">Your favorites</h2>
+            <a href="index.html#menu" class="text-sm font-semibold text-primary">Browse full menu</a>
+          </div>
+          <div id="favorites-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
+              <img src="https://picsum.photos/seed/pizza1/160/160" alt="Classic Margherita" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+              <div class="flex-1 min-w-0">
+                <p class="font-semibold text-sm truncate">Classic Margherita</p>
+                <p class="text-xs text-muted mt-0.5">$14.50</p>
+                <div class="flex items-center gap-3 mt-2">
+                  <button type="button" class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to order</button>
+                  <button type="button" data-favorite-toggle="Classic Margherita" aria-label="Remove Classic Margherita from favorites" aria-pressed="true" class="text-xs font-semibold text-danger flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5"></i> Remove</button>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
+              <img src="https://picsum.photos/seed/pizza2/160/160" alt="Spicy Pepperoni" class="w-16 h-16 rounded-lg object-cover shrink-0" width="64" height="64" />
+              <div class="flex-1 min-w-0">
+                <p class="font-semibold text-sm truncate">Spicy Pepperoni</p>
+                <p class="text-xs text-muted mt-0.5">$16.90</p>
+                <div class="flex items-center gap-3 mt-2">
+                  <button type="button" class="text-xs font-semibold text-primary flex items-center gap-1"><i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to order</button>
+                  <button type="button" data-favorite-toggle="Spicy Pepperoni" aria-label="Remove Spicy Pepperoni from favorites" aria-pressed="true" class="text-xs font-semibold text-danger flex items-center gap-1"><i data-lucide="heart" class="w-3.5 h-3.5"></i> Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Empty state (shown instead of the grid above when a customer has no favorites yet) -->
+          <div class="hidden text-center py-16 px-6 rounded-xl border border-dashed border-border">
+            <span class="w-14 h-14 rounded-full bg-surface-2 text-muted flex items-center justify-center mx-auto"><i data-lucide="heart" class="w-6 h-6"></i></span>
+            <h3 class="font-heading font-semibold mt-4">No favorites yet</h3>
+            <p class="text-sm text-muted mt-1">Tap the heart icon on any menu item to save it here for one-tap reordering.</p>
+            <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Browse the menu</a>
+          </div>
+        </div>
+
+        <!-- ============ COUPONS ============ -->
+        <div data-tab-panel="coupons" class="hidden space-y-5">
+          <h2 class="font-heading font-bold text-xl">Your coupons</h2>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="relative p-6 rounded-xl border-2 border-dashed border-primary bg-primary/5 overflow-hidden">
+              <span class="absolute top-4 end-4 px-2.5 py-1 rounded-full text-xs font-bold bg-gradient-brand text-white">20% OFF</span>
+              <p class="text-xs font-semibold text-muted uppercase tracking-wider">Family Combo</p>
+              <h3 class="font-heading font-bold text-lg mt-1">FAMILY20</h3>
+              <p class="text-sm text-muted mt-2">Valid on any Family Combo order over $30. Expires Jul 31, 2026.</p>
+              <button type="button" data-copy-coupon="FAMILY20" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Code
+              </button>
+            </div>
+            <div class="relative p-6 rounded-xl border-2 border-dashed border-border bg-surface overflow-hidden">
+              <span class="absolute top-4 end-4 px-2.5 py-1 rounded-full text-xs font-bold bg-success text-white">FREE DELIVERY</span>
+              <p class="text-xs font-semibold text-muted uppercase tracking-wider">Any order</p>
+              <h3 class="font-heading font-bold text-lg mt-1">FREESHIP</h3>
+              <p class="text-sm text-muted mt-2">Free delivery on your next order, no minimum. Expires Aug 15, 2026.</p>
+              <button type="button" data-copy-coupon="FREESHIP" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border font-semibold text-sm hover:bg-surface-2 transition-colors">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Code
+              </button>
+            </div>
+            <div class="relative p-6 rounded-xl border-2 border-dashed border-border bg-surface overflow-hidden opacity-60">
+              <span class="absolute top-4 end-4 px-2.5 py-1 rounded-full text-xs font-bold bg-muted/30 text-muted">EXPIRED</span>
+              <p class="text-xs font-semibold text-muted uppercase tracking-wider">Lunch Special</p>
+              <h3 class="font-heading font-bold text-lg mt-1">LUNCH10</h3>
+              <p class="text-sm text-muted mt-2">10% off Lunch Specials. Expired Jun 30, 2026.</p>
+              <button type="button" disabled class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border text-muted font-semibold text-sm cursor-not-allowed">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ NOTIFICATIONS ============ -->
+        <div data-tab-panel="notifications" class="hidden space-y-5">
+          <div class="flex items-center justify-between">
+            <h2 class="font-heading font-bold text-xl">Notifications</h2>
+            <button type="button" class="text-sm font-semibold text-primary">Mark all as read</button>
+          </div>
+          <div class="rounded-xl border border-border bg-surface card-elevate divide-y divide-border">
+            <div class="flex gap-4 p-5 bg-primary/5">
+              <span class="w-11 h-11 shrink-0 rounded-full bg-warning/15 text-warning flex items-center justify-center"><i data-lucide="bike" class="w-5 h-5"></i></span>
+              <div class="flex-1"><p class="text-sm">Order <strong>#10234</strong> is out for delivery — Marco is 0.8 mi away.</p><p class="text-xs text-muted mt-1">2 minutes ago</p></div>
+              <span class="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" aria-hidden="true"></span>
+            </div>
+            <div class="flex gap-4 p-5 bg-primary/5">
+              <span class="w-11 h-11 shrink-0 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="ticket-percent" class="w-5 h-5"></i></span>
+              <div class="flex-1"><p class="text-sm">New coupon just for you: <strong>20% off</strong> any Family Combo (code FAMILY20).</p><p class="text-xs text-muted mt-1">1 hour ago</p></div>
+              <span class="w-2 h-2 rounded-full bg-primary shrink-0 mt-2" aria-hidden="true"></span>
+            </div>
+            <div class="flex gap-4 p-5">
+              <span class="w-11 h-11 shrink-0 rounded-full bg-success/15 text-success flex items-center justify-center"><i data-lucide="check-check" class="w-5 h-5"></i></span>
+              <div class="flex-1"><p class="text-sm">Order <strong>#10198</strong> was delivered. Enjoy your Family Combo!</p><p class="text-xs text-muted mt-1">Jul 07, 2026</p></div>
+            </div>
+            <div class="flex gap-4 p-5">
+              <span class="w-11 h-11 shrink-0 rounded-full bg-primary/15 text-primary flex items-center justify-center"><i data-lucide="heart" class="w-5 h-5"></i></span>
+              <div class="flex-1"><p class="text-sm">Classic Margherita added to your favorites.</p><p class="text-xs text-muted mt-1">Jun 28, 2026</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SAVED ADDRESSES ============ -->
+        <div data-tab-panel="addresses" class="hidden space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="font-heading font-bold text-xl">Saved addresses</h2>
+            <button data-ripple data-modal-open="address-modal" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-gradient-brand text-white text-sm font-semibold shadow-glow"><i data-lucide="plus" class="w-4 h-4"></i> Add Address</button>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="p-6 rounded-xl border-2 border-primary bg-surface card-elevate relative">
+              <span class="absolute top-4 end-4 px-2.5 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary">Default</span>
+              <div class="flex items-center gap-2 text-primary"><i data-lucide="home" class="w-5 h-5"></i><h3 class="font-semibold">Home</h3></div>
+              <p class="text-sm text-muted mt-2">214 Baker Street, Apt 3B<br />Riverside, CA 92501</p>
+              <div class="flex gap-3 mt-4 text-xs font-semibold">
+                <button type="button" class="text-primary">Edit</button>
+                <button type="button" class="text-danger">Remove</button>
+              </div>
+            </div>
+            <div class="p-6 rounded-xl border border-border bg-surface card-elevate">
+              <div class="flex items-center gap-2"><i data-lucide="briefcase" class="w-5 h-5 text-muted"></i><h3 class="font-semibold">Work</h3></div>
+              <p class="text-sm text-muted mt-2">500 Market Street, Suite 210<br />Riverside, CA 92502</p>
+              <div class="flex gap-3 mt-4 text-xs font-semibold">
+                <button type="button" class="text-primary">Edit</button>
+                <button type="button" class="text-primary">Set as default</button>
+                <button type="button" class="text-danger">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ PROFILE ============ -->
+        <div data-tab-panel="profile" class="hidden p-6 sm:p-8 rounded-xl border border-border bg-surface card-elevate space-y-5">
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <img src="https://i.pravatar.cc/200?img=19" alt="Jenna Rivers profile photo" class="w-20 h-20 rounded-full object-cover" width="80" height="80" />
+              <button data-ripple type="button" aria-label="Change photo" class="absolute bottom-0 end-0 w-7 h-7 rounded-full bg-gradient-brand text-white flex items-center justify-center border-2 border-surface"><i data-lucide="camera" class="w-3 h-3"></i></button>
+            </div>
+            <div><h2 class="font-heading font-bold text-lg">Jenna Rivers</h2><p class="text-sm text-muted">Member since 2023 · 42 orders</p></div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="acc-name" class="text-sm font-medium">Full name</label>
+              <input id="acc-name" type="text" value="Jenna Rivers" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+            </div>
+            <div>
+              <label for="acc-email" class="text-sm font-medium">Email address</label>
+              <input id="acc-email" type="email" value="jenna.rivers@email.com" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+            </div>
+            <div>
+              <label for="acc-phone" class="text-sm font-medium">Phone</label>
+              <input id="acc-phone" type="tel" value="+1 (555) 019-8822" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+            </div>
+            <div>
+              <label for="acc-diet" class="text-sm font-medium">Dietary preference</label>
+              <select id="acc-diet" class="w-full mt-1.5 px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none">
+                <option>No preference</option><option>Vegetarian</option><option>Vegan</option><option>Gluten-free crust</option>
+              </select>
+            </div>
+          </div>
+          <label class="flex items-center justify-between p-4 rounded-lg bg-surface-2">
+            <span class="text-sm font-medium">Order status text alerts</span>
+            <input type="checkbox" checked class="w-5 h-5 rounded border-border text-primary focus:ring-primary" />
+          </label>
+          <div class="flex gap-3">
+            <button data-ripple type="button" class="px-6 py-2.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow text-sm">Save changes</button>
+            <a href="login.html" class="px-6 py-2.5 rounded-md border border-border font-semibold text-sm hover:bg-surface-2">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ADD ADDRESS MODAL -->
+  <div id="address-modal" data-modal class="fixed inset-0 z-[60] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center bg-secondary/70 p-4" role="dialog" aria-modal="true" aria-labelledby="address-modal-title">
+    <div class="modal-panel opacity-0 scale-95 glass rounded-xl shadow-elevated w-full max-w-md p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 id="address-modal-title" class="font-heading font-semibold text-lg">Add new address</h2>
+        <button type="button" data-modal-close aria-label="Close" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <form data-validate class="space-y-4" novalidate>
+        <div data-field-wrapper>
+          <label for="addr-label" class="sr-only">Label</label>
+          <input id="addr-label" data-autofocus name="label" type="text" required data-field="name" placeholder="Label (e.g. Home, Work)" class="w-full px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" />
+          <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+        </div>
+        <div data-field-wrapper>
+          <label for="addr-street" class="sr-only">Street address</label>
+          <input id="addr-street" name="street" type="text" required class="w-full px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" placeholder="Street address" />
+          <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div data-field-wrapper>
+            <label for="addr-city" class="sr-only">City</label>
+            <input id="addr-city" name="city" type="text" required class="w-full px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" placeholder="City" />
+            <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+          </div>
+          <div data-field-wrapper>
+            <label for="addr-zip" class="sr-only">Zip code</label>
+            <input id="addr-zip" name="zip" type="text" required class="w-full px-4 py-2.5 rounded-md border border-border bg-body text-sm focus:border-primary outline-none" placeholder="Zip code" />
+            <p data-field-message class="hidden text-xs text-danger mt-1"></p>
+          </div>
+        </div>
+        <button data-ripple type="submit" class="w-full py-3 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Save Address</button>
+        <p data-form-status class="hidden" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/modules/theme.js" defer></script>
+  <script src="assets/js/modules/nav.js" defer></script>
+  <script src="assets/js/modules/reveal.js" defer></script>
+  <script src="assets/js/modules/counter.js" defer></script>
+  <script src="assets/js/modules/forms.js" defer></script>
+  <script src="assets/js/modules/components.js" defer></script>
+  <script src="assets/js/modules/micro.js" defer></script>
+  <script src="assets/js/modules/favorites.js" defer></script>
+  <script src="assets/js/modules/ripple.js" defer></script>
+  <script src="assets/js/modules/carousel.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.querySelectorAll("[data-copy-coupon]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const code = btn.dataset.copyCoupon;
+        navigator.clipboard?.writeText(code).catch(() => {});
+        window.dispatchEvent(new CustomEvent("stackly:toast", { detail: { type: "success", message: `Code ${code} copied to clipboard.` } }));
+      });
+    });
+
+    // Simulate the "live" order card loading from the server before revealing it.
+    const orderSkeleton = document.querySelector("[data-order-skeleton]");
+    const orderContent = document.querySelector("[data-order-content]");
+    if (orderSkeleton && orderContent) {
+      window.setTimeout(() => {
+        orderSkeleton.classList.add("hidden");
+        orderContent.classList.remove("hidden");
+        orderContent.animate(
+          [{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "translateY(0)" }],
+          { duration: 400, easing: "ease-out" }
+        );
+      }, 900);
+    }
+  </script>
+</body>
+</html>
