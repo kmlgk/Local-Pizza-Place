@@ -68,16 +68,18 @@ function initMenu() {
   let page = 1;
 
   root.innerHTML = `
-    <div data-tabs-wrap class="relative flex flex-wrap justify-center gap-1 p-1.5 rounded-full glass max-w-max mx-auto" role="tablist" aria-label="Menu categories">
-      <span data-tab-indicator class="absolute inset-y-1.5 rounded-full bg-gradient-brand shadow-glow transition-all duration-300" style="left:6px; width:0;" aria-hidden="true"></span>
-      ${data.categories
-        .map(
-          (c) =>
-            `<button type="button" data-cat="${c.id}" role="tab" class="relative z-10 px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-1.5 transition-colors duration-300">
-              <i data-lucide="${c.icon}" class="w-4 h-4"></i>${c.label}
-            </button>`
-        )
-        .join("")}
+    <div data-tabs-scroll class="-mx-4 px-4 sm:mx-0 sm:px-0 overflow-x-auto scrollbar-hide">
+      <div data-tabs-wrap class="relative flex flex-nowrap items-center justify-start sm:justify-center gap-1 p-1.5 rounded-full glass w-max sm:max-w-max mx-auto" role="tablist" aria-label="Menu categories">
+        <span data-tab-indicator class="absolute inset-y-1.5 rounded-full bg-gradient-brand shadow-glow transition-all duration-300" style="left:6px; width:0;" aria-hidden="true"></span>
+        ${data.categories
+          .map(
+            (c) =>
+              `<button type="button" data-cat="${c.id}" role="tab" class="relative z-10 shrink-0 whitespace-nowrap px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-1.5 transition-colors duration-300">
+                <i data-lucide="${c.icon}" class="w-4 h-4"></i>${c.label}
+              </button>`
+          )
+          .join("")}
+      </div>
     </div>
     <div data-grid class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10"></div>
     <nav data-pagination aria-label="Menu pagination" class="flex items-center justify-center gap-2 mt-10"></nav>

@@ -278,6 +278,10 @@ body.page-leaving {
 }
 [data-site-header].is-scrolled > div:first-child { height: 4.25rem; }
 
+/* ---------- 5b-2b. Hide-scrollbar utility (horizontally scrollable tab bars) ---------- */
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 /* ---------- 5b-3. Glow CTA hover intensify ---------- */
 .shadow-glow { transition: box-shadow 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo); }
 a.shadow-glow:hover, button.shadow-glow:hover {
