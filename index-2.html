@@ -16,9 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/tailwind-build.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
@@ -67,7 +65,7 @@
             <a href="index-2.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Catering &amp; Events</a>
           </div>
         </div>
-        <a href="#packages" class="text-sm font-medium hover:text-primary transition-colors">Packages</a>
+        <a href="packages.html" class="text-sm font-medium hover:text-primary transition-colors">Packages</a>
         <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
         <a href="service-details.html" class="text-sm font-medium hover:text-primary transition-colors">Catering Details</a>
         <a href="pricing.html" class="text-sm font-medium hover:text-primary transition-colors">Pricing</a>
@@ -115,12 +113,15 @@
       <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
     <nav class="flex flex-col gap-1">
-      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Order Online</a>
-      <a href="index-2.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-primary/10 text-primary">Catering &amp; Events</a>
-      <a href="service-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering Details</a>
-      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing</a>
-      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
-      <a data-ripple href="register.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">Create Account</a>
+      <a data-nav-link href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Order Online</a>
+      <a data-nav-link href="index-2.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering &amp; Events</a>
+      <a data-nav-link href="packages.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Packages</a>
+      <a data-nav-link href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a data-nav-link href="service-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering Details</a>
+      <a data-nav-link href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing</a>
+      <a data-nav-link href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <div class="h-px bg-border my-2"></div>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
       <div class="h-px bg-border my-2"></div>
       <p class="px-3 text-xs font-semibold text-muted uppercase tracking-wider mb-1">More pages</p>
       <a data-nav-link href="blog-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Sample Blog Post</a>
@@ -130,8 +131,7 @@
       <a data-nav-link href="coming-soon.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Coming Soon</a>
       <a data-nav-link href="maintenance.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Maintenance</a>
       <a data-nav-link href="404.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">404 Page</a>
-
-    </nav>
+</nav>
   </aside>
 
   <main id="main">
@@ -154,7 +154,7 @@
           <a data-ripple data-magnetic="16" data-modal-open="quote-modal" href="#" class="magnetic-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">
             Get a Free Quote <i data-lucide="arrow-right" class="w-4 h-4 rtl:rotate-180"></i>
           </a>
-          <a href="#packages" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-border hover:bg-surface-2 font-semibold transition-colors">View Packages</a>
+          <a href="packages.html" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-md border border-border hover:bg-surface-2 font-semibold transition-colors">View Packages</a>
         </div>
         <p data-reveal="fade-up" data-reveal-delay="300" class="text-xs text-muted mt-4">24-hour advance booking · Free delivery over $150 · Gluten-free &amp; vegan available</p>
       </div>
@@ -190,41 +190,6 @@
           <p class="font-heading font-extrabold text-3xl sm:text-4xl"><span data-counter data-counter-to="4.9" data-counter-decimals="1" data-counter-suffix="★">0</span></p>
           <p class="text-white/80 text-sm mt-2">Average event rating</p>
         </div>
-      </div>
-    </section>
-
-    <!-- PACKAGES -->
-    <section id="packages" class="py-24">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-2xl mx-auto text-center" data-reveal="fade-up">
-          <span class="text-sm font-semibold text-primary uppercase tracking-wider">Catering packages</span>
-          <h2 class="font-heading font-bold text-3xl sm:text-4xl mt-3">Sized right for your event</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6 mt-14">
-          <div data-reveal="fade-up" class="p-8 rounded-xl border border-border bg-surface card-elevate">
-            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5"><i data-lucide="briefcase" class="w-6 h-6"></i></span>
-            <h3 class="font-heading font-semibold text-lg">Office Lunch</h3>
-            <p class="text-sm text-muted mt-2">10–15 guests · mix of 3 pizza varieties + salad</p>
-            <p class="mt-4 text-2xl font-heading font-extrabold">$129</p>
-            <a data-ripple data-modal-open="quote-modal" href="#" class="mt-6 block text-center py-3 rounded-md border border-border font-semibold hover:bg-surface-2 transition-colors">Get Quote</a>
-          </div>
-          <div data-reveal="fade-up" data-reveal-delay="100" class="p-8 rounded-xl border-2 border-primary bg-surface card-elevate relative">
-            <span class="absolute -top-3 start-1/2 -translate-x-1/2 bg-gradient-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
-            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5"><i data-lucide="party-popper" class="w-6 h-6"></i></span>
-            <h3 class="font-heading font-semibold text-lg">Party Tray</h3>
-            <p class="text-sm text-muted mt-2">15–25 guests · 5 varieties + sides + drinks</p>
-            <p class="mt-4 text-2xl font-heading font-extrabold">$219</p>
-            <a data-ripple data-modal-open="quote-modal" href="#" class="mt-6 block text-center py-3 rounded-md bg-gradient-brand text-white font-semibold shadow-glow">Get Quote</a>
-          </div>
-          <div data-reveal="fade-up" data-reveal-delay="200" class="p-8 rounded-xl border border-border bg-surface card-elevate">
-            <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5"><i data-lucide="gem" class="w-6 h-6"></i></span>
-            <h3 class="font-heading font-semibold text-lg">Big Event</h3>
-            <p class="text-sm text-muted mt-2">25–50 guests · full custom menu + staff on-site</p>
-            <p class="mt-4 text-2xl font-heading font-extrabold">$399</p>
-            <a data-ripple data-modal-open="quote-modal" href="#" class="mt-6 block text-center py-3 rounded-md border border-border font-semibold hover:bg-surface-2 transition-colors">Get Quote</a>
-          </div>
-        </div>
-        <p class="text-center text-sm text-muted mt-8">Need something bigger? <a href="service-details.html" class="text-primary font-semibold">View full catering details</a> or <a href="contact.html" class="text-primary font-semibold">contact us directly</a>.</p>
       </div>
     </section>
 
@@ -301,7 +266,7 @@
       </div>
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Catering</h3>
-        <ul class="mt-4 space-y-3 text-sm"><li><a href="#packages" class="hover:text-white">Packages</a></li><li><a href="service-details.html" class="hover:text-white">Full details</a></li><li><a href="pricing.html" class="hover:text-white">Pricing</a></li></ul>
+        <ul class="mt-4 space-y-3 text-sm"><li><a href="packages.html" class="hover:text-white">Packages</a></li><li><a href="service-details.html" class="hover:text-white">Full details</a></li><li><a href="pricing.html" class="hover:text-white">Pricing</a></li></ul>
       </div>
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Company</h3>

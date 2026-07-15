@@ -16,9 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/tailwind-build.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
@@ -67,7 +65,7 @@
             <a href="index-2.html" class="block px-3 py-2 rounded-md text-sm hover:bg-primary/10">Catering &amp; Events</a>
           </div>
         </div>
-        <a href="index.html#menu" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
+        <a href="menu.html" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
         <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
         <div data-dropdown class="relative">
           <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-semibold text-primary">Company <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
@@ -106,7 +104,7 @@
         <a href="dashboard.html" class="hidden xl:inline-flex items-center gap-2 text-sm font-medium px-4 py-2.5 rounded-md hover:bg-surface-2 transition-colors">
           <i data-lucide="user-circle" class="w-4 h-4"></i> My Account
         </a>
-        <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
+        <a data-ripple href="menu.html" class="inline-flex items-center gap-2 text-sm font-semibold px-4 sm:px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
           <i data-lucide="shopping-bag" class="w-4 h-4"></i> <span class="hidden sm:inline">Order</span>
         </a>
         <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
@@ -123,18 +121,18 @@
       <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
     <nav class="flex flex-col gap-1">
-      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Order Online</a>
-      <a href="index-2.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering &amp; Events</a>
-      <a href="index.html#menu" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
-      <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
-      <a href="services.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-primary/10 text-primary">Services</a>
-      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
-      <a href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing &amp; Deals</a>
-      <a href="reservations.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Reservations</a>
-      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <a data-nav-link href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Order Online</a>
+      <a data-nav-link href="index-2.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering &amp; Events</a>
+      <a data-nav-link href="menu.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
+      <a data-nav-link href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
+      <a data-nav-link href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
+      <a data-nav-link href="service-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Catering Details</a>
+      <a data-nav-link href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a data-nav-link href="pricing.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Pricing &amp; Deals</a>
+      <a data-nav-link href="reservations.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Reservations</a>
+      <a data-nav-link href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
       <div class="h-px bg-border my-2"></div>
-      <a href="login.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Login</a>
-      <a data-ripple href="register.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">Create Account</a>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
       <div class="h-px bg-border my-2"></div>
       <p class="px-3 text-xs font-semibold text-muted uppercase tracking-wider mb-1">More pages</p>
       <a data-nav-link href="blog-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Sample Blog Post</a>
@@ -144,8 +142,7 @@
       <a data-nav-link href="coming-soon.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Coming Soon</a>
       <a data-nav-link href="maintenance.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Maintenance</a>
       <a data-nav-link href="404.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">404 Page</a>
-
-    </nav>
+</nav>
   </aside>
 
   <main id="main">
@@ -178,7 +175,7 @@
           </span>
           <h3 class="font-heading font-semibold text-lg">Delivery</h3>
           <p class="text-muted text-sm mt-2">Hot to your door in 30 minutes or less, with live tracking the whole way.</p>
-          <a href="index.html#menu" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Order delivery <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          <a href="menu.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Order delivery <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
         </article>
         <article data-reveal="fade-up" data-reveal-delay="160" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
           <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
@@ -186,7 +183,7 @@
           </span>
           <h3 class="font-heading font-semibold text-lg">Takeout</h3>
           <p class="text-muted text-sm mt-2">Order ahead online and skip the wait — ready in 15 minutes, curbside pickup available.</p>
-          <a href="index.html#menu" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Order takeout <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
+          <a href="menu.html" class="inline-flex items-center gap-1 text-sm font-semibold text-primary mt-4">Order takeout <i data-lucide="arrow-right" class="w-3.5 h-3.5 rtl:rotate-180"></i></a>
         </article>
         <article data-reveal="fade-up" class="card-elevate group p-7 rounded-lg border border-border bg-surface">
           <span class="w-12 h-12 rounded-md bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-gradient-brand group-hover:text-white transition-colors">
@@ -241,7 +238,7 @@
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Explore</h3>
         <ul class="mt-4 space-y-3 text-sm">
-          <li><a href="index.html#menu" class="hover:text-white transition-colors">Full menu</a></li>
+          <li><a href="menu.html" class="hover:text-white transition-colors">Full menu</a></li>
           <li><a href="about.html" class="hover:text-white transition-colors">About us</a></li>
           <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
           <li><a href="pricing.html" class="hover:text-white transition-colors">Pricing &amp; deals</a></li>

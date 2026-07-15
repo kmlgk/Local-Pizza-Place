@@ -19,9 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/tailwind-build.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
@@ -89,7 +87,7 @@
         <button type="button" data-dir-toggle aria-pressed="false" aria-label="Switch to right-to-left layout" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2 transition-colors">
           <i data-lucide="languages" class="w-5 h-5"></i>
         </button>
-        <a data-ripple href="index.html#menu" class="hidden lg:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">Order Now</a>
+        <a data-ripple href="menu.html" class="hidden lg:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">Order Now</a>
         <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
@@ -104,10 +102,11 @@
       <button type="button" data-menu-toggle aria-label="Close menu" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-surface-2"><i data-lucide="x" class="w-5 h-5"></i></button>
     </div>
     <nav class="flex flex-col gap-1">
-      <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home</a>
-      <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
-      <a href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
-      <a data-ripple href="register.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">Create Account</a>
+      <a data-nav-link href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home</a>
+      <a data-nav-link href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
+      <a data-nav-link href="contact.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Contact</a>
+      <div class="h-px bg-border my-2"></div>
+      <a data-ripple href="dashboard.html" class="px-3 py-3 rounded-md text-sm font-semibold bg-gradient-brand text-white text-center mt-2">My Account</a>
       <div class="h-px bg-border my-2"></div>
       <p class="px-3 text-xs font-semibold text-muted uppercase tracking-wider mb-1">More pages</p>
       <a data-nav-link href="blog-details.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Sample Blog Post</a>
@@ -117,8 +116,7 @@
       <a data-nav-link href="coming-soon.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Coming Soon</a>
       <a data-nav-link href="maintenance.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Maintenance</a>
       <a data-nav-link href="404.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">404 Page</a>
-
-    </nav>
+</nav>
   </aside>
 
   <main id="main">
@@ -242,7 +240,7 @@
           <div class="p-6 rounded-xl glass shadow-elevated">
             <h3 class="font-heading font-semibold">Craving pizza now?</h3>
             <p class="text-sm text-muted mt-2">Order online for delivery in under 30 minutes.</p>
-            <a data-ripple href="index.html#menu" class="mt-4 block text-center w-full py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Order Now</a>
+            <a data-ripple href="menu.html" class="mt-4 block text-center w-full py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Order Now</a>
           </div>
         </aside>
       </div>
@@ -288,7 +286,7 @@
       </div>
       <div>
         <h3 class="text-white font-semibold text-sm uppercase tracking-wider">Order</h3>
-        <ul class="mt-4 space-y-3 text-sm"><li><a href="index.html#menu" class="hover:text-white">Full menu</a></li></ul>
+        <ul class="mt-4 space-y-3 text-sm"><li><a href="menu.html" class="hover:text-white">Full menu</a></li></ul>
       </div>
     </div>
     <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 text-xs text-center">

@@ -18,9 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/js/tailwind-config.js"></script>
-  <script>tailwind.config = window.stacklyTailwindConfig;</script>
+  <link rel="stylesheet" href="assets/css/tailwind-build.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
@@ -69,7 +67,7 @@
       </a>
       <nav class="hidden lg:flex items-center gap-5" aria-label="Primary">
         <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Home</a>
-        <a href="index.html#menu" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
+        <a href="menu.html" class="text-sm font-medium hover:text-primary transition-colors">Menu</a>
         <a href="about.html" class="text-sm font-medium hover:text-primary transition-colors">About</a>
         <div data-dropdown class="relative">
           <button data-dropdown-trigger aria-expanded="false" class="flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors">Company <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
@@ -108,7 +106,7 @@
           <i data-lucide="bell" class="w-5 h-5"></i>
           <span class="absolute top-2 end-2 w-2 h-2 rounded-full bg-danger"></span>
         </a>
-        <a data-ripple href="index.html#menu" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
+        <a data-ripple href="menu.html" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-md bg-gradient-brand text-white shadow-glow">
           <i data-lucide="plus" class="w-4 h-4"></i> New Order
         </a>
         <button type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu" class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-2">
@@ -126,7 +124,7 @@
     </div>
     <nav class="flex flex-col gap-1">
       <a href="index.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Home</a>
-      <a href="index.html#menu" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
+      <a href="menu.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Menu</a>
       <a href="about.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">About</a>
       <a href="services.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Services</a>
       <a href="blog.html" class="px-3 py-3 rounded-md text-sm font-medium hover:bg-surface-2">Blog</a>
@@ -155,7 +153,7 @@
           <p class="text-muted text-sm">Here's what's happening with your orders.</p>
         </div>
       </div>
-      <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow shrink-0">
+      <a data-ripple href="menu.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold shadow-glow shrink-0">
         <i data-lucide="plus" class="w-4 h-4"></i> Place New Order
       </a>
     </div>
@@ -305,7 +303,7 @@
         <div data-tab-panel="favorites" class="hidden space-y-5">
           <div class="flex items-center justify-between">
             <h2 class="font-heading font-bold text-xl">Your favorites</h2>
-            <a href="index.html#menu" class="text-sm font-semibold text-primary">Browse full menu</a>
+            <a href="menu.html" class="text-sm font-semibold text-primary">Browse full menu</a>
           </div>
           <div id="favorites-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             <div class="p-5 rounded-xl border border-border bg-surface card-elevate flex gap-4">
@@ -336,7 +334,7 @@
             <span class="w-14 h-14 rounded-full bg-surface-2 text-muted flex items-center justify-center mx-auto"><i data-lucide="heart" class="w-6 h-6"></i></span>
             <h3 class="font-heading font-semibold mt-4">No favorites yet</h3>
             <p class="text-sm text-muted mt-1">Tap the heart icon on any menu item to save it here for one-tap reordering.</p>
-            <a data-ripple href="index.html#menu" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Browse the menu</a>
+            <a data-ripple href="menu.html" class="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-md bg-gradient-brand text-white font-semibold text-sm">Browse the menu</a>
           </div>
         </div>
 

@@ -11,7 +11,10 @@ function initNav() {
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  const menuToggle = document.querySelector("[data-menu-toggle]");
+  // Both the header hamburger button AND the in-drawer X close button share
+  // this attribute — querySelectorAll (not querySelector) is required so the
+  // close button actually gets a click handler wired up too.
+  const menuToggles = document.querySelectorAll("[data-menu-toggle]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
   const menuBackdrop = document.querySelector("[data-menu-backdrop]");
 
@@ -19,15 +22,17 @@ function initNav() {
     if (!mobileMenu) return;
     mobileMenu.classList.toggle("translate-x-0", open);
     mobileMenu.classList.toggle(document.dir === "rtl" ? "translate-x-full" : "-translate-x-full", !open);
-    menuToggle?.setAttribute("aria-expanded", String(open));
+    menuToggles.forEach((btn) => btn.setAttribute("aria-expanded", String(open)));
     menuBackdrop?.classList.toggle("opacity-0", !open);
     menuBackdrop?.classList.toggle("pointer-events-none", !open);
     document.body.classList.toggle("overflow-hidden", open);
   }
 
-  menuToggle?.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    setMenu(!isOpen);
+  menuToggles.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isOpen = mobileMenu?.classList.contains("translate-x-0");
+      setMenu(!isOpen);
+    });
   });
   menuBackdrop?.addEventListener("click", () => setMenu(false));
   document.addEventListener("keydown", (e) => {
