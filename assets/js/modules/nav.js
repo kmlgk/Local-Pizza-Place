@@ -11,26 +11,30 @@ function initNav() {
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Both the header hamburger button AND the in-drawer X close button share
-  // this attribute — querySelectorAll (not querySelector) is required so the
-  // close button actually gets a click handler wired up too.
   const menuToggles = document.querySelectorAll("[data-menu-toggle]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
   const menuBackdrop = document.querySelector("[data-menu-backdrop]");
 
   function setMenu(open) {
     if (!mobileMenu) return;
-    mobileMenu.classList.toggle("translate-x-0", open);
-    mobileMenu.classList.toggle(document.dir === "rtl" ? "translate-x-full" : "-translate-x-full", !open);
-    menuToggles.forEach((btn) => btn.setAttribute("aria-expanded", String(open)));
+    mobileMenu.classList.toggle("menu-open", open);
+    menuToggles.forEach((btn) => {
+      btn.setAttribute("aria-expanded", String(open));
+      btn.querySelector(".icon-menu-open")?.classList.toggle("hidden", open);
+      btn.querySelector(".icon-menu-close")?.classList.toggle("hidden", !open);
+    });
+    menuBackdrop?.classList.toggle("menu-open", open);
     menuBackdrop?.classList.toggle("opacity-0", !open);
     menuBackdrop?.classList.toggle("pointer-events-none", !open);
+    document.documentElement.classList.toggle("menu-locked", open);
     document.body.classList.toggle("overflow-hidden", open);
+    if (open) window.__lenis?.stop();
+    else window.__lenis?.start();
   }
 
   menuToggles.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const isOpen = mobileMenu?.classList.contains("translate-x-0");
+      const isOpen = mobileMenu?.classList.contains("menu-open");
       setMenu(!isOpen);
     });
   });
@@ -39,6 +43,17 @@ function initNav() {
     if (e.key === "Escape") setMenu(false);
   });
   mobileMenu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+
+  // Accordion submenus inside the mobile menu — independent (not exclusive),
+  // so opening one group doesn't collapse the others.
+  mobileMenu?.querySelectorAll("[data-submenu-toggle]").forEach((btn) => {
+    const panel = btn.nextElementSibling;
+    btn.addEventListener("click", () => {
+      const isOpen = panel.classList.contains("submenu-open");
+      panel.classList.toggle("submenu-open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
 
   // RTL demo toggle
   document.querySelectorAll("[data-dir-toggle]").forEach((btn) => {
@@ -62,6 +77,17 @@ function initNav() {
       link.setAttribute("aria-current", "page");
       const trigger = link.closest("[data-dropdown]")?.querySelector("[data-dropdown-trigger]");
       trigger?.classList.add("text-primary");
+
+      // Mobile accordion equivalent — also auto-expand the group so the
+      // current page's link is visible without an extra tap.
+      const submenuGroup = link.closest("[data-submenu-group]");
+      if (submenuGroup) {
+        const toggle = submenuGroup.querySelector("[data-submenu-toggle]");
+        const panel = submenuGroup.querySelector("[data-submenu-panel]");
+        toggle?.classList.add("text-primary");
+        panel?.classList.add("submenu-open");
+        toggle?.setAttribute("aria-expanded", "true");
+      }
     }
   });
 
