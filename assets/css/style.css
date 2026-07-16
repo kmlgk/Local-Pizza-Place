@@ -282,39 +282,29 @@ body.page-leaving {
 .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-/* ---------- 5b-2c. Mobile menu — top-slide panel + accordion submenus ----------
-   Fixed full-width panel anchored to the viewport top (covers the real header
-   while open) with its own compact header row + a separately-scrolling nav
-   body. transform (not max-height) drives the open/close slide so it stays on
-   the compositor — smooth on low-end Android as well as iOS. The panel's own
-   height is capped at the dynamic viewport height (100dvh, with a 100vh
-   fallback for engines that don't support dvh) so it never needs to guess a
-   px/vh cap; the inner <nav> does flex-1 + min-h-0 + overflow-y-auto so IT
-   (not the page) scrolls once content exceeds the available height — the
-   min-h-0 override matters because flex items default to min-height:auto,
-   which would otherwise let the nav grow past its container instead of
-   scrolling. */
+/* ---------- 5b-2c. Mobile menu — dropdown panel + accordion submenus ----------
+   Deliberately NOT position:fixed and NOT anchored to the viewport top: an
+   earlier version of this component did that (a "takeover" panel sitting
+   above the real header), and while open it visually covered the sticky
+   header — which reads as "the header disappears" the moment you tap the
+   hamburger. This version stays in normal document flow immediately below
+   the header, so the header is never hidden, never re-painted, and never
+   affected by opening/closing the menu or by navigating to another page.
+   The panel reveals via max-height/opacity (0 -> 80vh) with its own
+   overflow-y-auto, so a fully expanded menu (all submenus open) scrolls
+   internally instead of overflowing the viewport or pushing/hiding anything
+   else. overscroll-behavior:contain stops that internal scroll from
+   chaining into the page behind it once it hits the top/bottom. */
 [data-mobile-menu] {
-  /* left/right/top hand-written rather than relying on the Tailwind
-     "inset-x-0"/"top-0" classes in the markup — inset-x-0 was never used
-     anywhere before this component, so the pre-built static Tailwind CSS
-     (generated once via CLI, not a live JIT build) never generated it and
-     silently dropped the rule, leaving the panel sized to its content
-     instead of spanning the viewport. Same risk applies to any other
-     brand-new utility class, so the load-bearing positioning lives here. */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-height: 100vh;
-  max-height: 100dvh;
-  transform: translateY(-100%);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
+  max-height: 0;
+  opacity: 0;
+  overflow-y: hidden;
+  transition: max-height 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
 }
-[data-mobile-menu].menu-open { transform: translateY(0); }
-[data-mobile-menu-scroll],
-[data-mobile-menu] [data-mobile-menu-scroll] {
+[data-mobile-menu].menu-open {
+  max-height: 80vh;
+  opacity: 1;
+  overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
