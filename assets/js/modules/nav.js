@@ -4,6 +4,7 @@
  */
 (function () {
 function initNav() {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const header = document.querySelector("[data-site-header]");
   if (header) {
     const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -26,10 +27,23 @@ function initNav() {
     menuBackdrop?.classList.toggle("menu-open", open);
     menuBackdrop?.classList.toggle("opacity-0", !open);
     menuBackdrop?.classList.toggle("pointer-events-none", !open);
+    // Locking scroll on BOTH html and body at once (as this used to do) is
+    // what broke [data-site-header]'s position:sticky while scrolled — with
+    // both ancestors overflow:hidden simultaneously, the browser miscalculates
+    // the sticky element's containing block and it detaches from the
+    // viewport entirely. html-only locking prevents background scroll just
+    // as well without that interaction.
     document.documentElement.classList.toggle("menu-locked", open);
-    document.body.classList.toggle("overflow-hidden", open);
-    if (open) window.__lenis?.stop();
-    else window.__lenis?.start();
+    if (open) {
+      window.__lenis?.stop();
+      // The panel lives in normal document flow right below the header (see
+      // style.css) — if it opens while scrolled down, it expands off-screen
+      // above the current viewport instead of anywhere near the header.
+      // Scrolling to top on open keeps header + menu always in view together.
+      if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    } else {
+      window.__lenis?.start();
+    }
   }
 
   menuToggles.forEach((btn) => {
@@ -92,7 +106,6 @@ function initNav() {
   });
 
   // Smooth page-leave transition for internal navigation links
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!reduceMotion) {
     document.querySelectorAll("a[href]").forEach((link) => {
       const href = link.getAttribute("href");
